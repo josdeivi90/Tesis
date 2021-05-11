@@ -1,0 +1,1363 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.24)  11 MAY 2021 03:33
+entering extended mode
+**./EV.tex
+(EV.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+("C:\Program Files\MiKTeX\tex/latex/base\report.cls"
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+("C:\Program Files\MiKTeX\tex/latex/base\size11.clo"
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+("C:\Program Files\MiKTeX\tex/generic/babel\babel.sty"
+Package: babel 2020/12/16 3.52 The Babel package
+
+("C:\Program Files\MiKTeX\tex/generic/babel\babel.def"
+File: babel.def 2020/12/16 3.52 Babel common definitions
+\babel@savecnt=\count186
+\U@D=\dimen139
+\l@babelnohyphens=\language79
+
+("C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count187
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+\es@quottoks=\toks15
+\es@quotdepth=\count188
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+))
+("C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty"
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+("C:\Program Files\MiKTeX\tex/latex/base\ansinew.def"
+File: ansinew.def 2020/08/01 v1.3d Input encoding file
+))
+("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+("C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty"
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+)
+("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf.sty"
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.st
+y
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+("C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty"
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+))
+(xthesis.sty
+Document Style Option `dalthesis'.
+) ("C:\Program Files\MiKTeX\tex/latex/graphics\epsfig.sty"
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen142
+\epsfysize=\dimen143
+)
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen144
+))
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen145
+)
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count189
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count190
+\leftroot@=\count191
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count192
+\DOTSCASE@=\count193
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen146
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count194
+\c@MaxMatrixCols=\count195
+\dotsspace@=\muskip16
+\c@parentequation=\count196
+\dspbrk@lvl=\count197
+\tag@help=\toks20
+\row@=\count198
+\column@=\count199
+\maxfields@=\count266
+\andhelp@=\toks21
+\eqnshift@=\dimen147
+\alignsep@=\dimen148
+\tagshift@=\dimen149
+\tagwidth@=\dimen150
+\totwidth@=\dimen151
+\lineht@=\dimen152
+\@envbody=\toks22
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen153
+\Hy@linkcounter=\count267
+\Hy@pagecounter=\count268
+
+("C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count269
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count270
+
+("C:\Program Files\MiKTeX\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen154
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count271
+\Field@Width=\dimen155
+\Fld@charsize=\dimen156
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+("C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty"
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count272
+\c@Item=\count273
+\c@Hfootnote=\count274
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+("C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty"
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count275
+\c@bookmark@seq@number=\count276
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.
+sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecounter.
+sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip52
+) (C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip53
+\subfigcapskip=\skip54
+\subfigcaptopadj=\dimen157
+\subfigbottomskip=\skip55
+\subfigcapmargin=\dimen158
+\subfiglabelskip=\skip56
+\c@subfigure=\count277
+\c@lofdepth=\count278
+\c@subtable=\count279
+\c@lotdepth=\count280
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/subfigure\subfigure.cfg)
+\subfig@top=\skip57
+\subfig@bottom=\skip58
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen159
+\lightrulewidth=\dimen160
+\cmidrulewidth=\dimen161
+\belowrulesep=\dimen162
+\belowbottomsep=\dimen163
+\aboverulesep=\dimen164
+\abovetopsep=\dimen165
+\cmidrulesep=\dimen166
+\cmidrulekern=\dimen167
+\defaultaddspace=\dimen168
+\@cmidla=\count281
+\@cmidlb=\count282
+\@aboverulesep=\dimen169
+\@belowrulesep=\dimen170
+\@thisruleclass=\count283
+\@lastruleclass=\count284
+\@thisrulewidth=\dimen171
+)
+("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/psfrag\psfrag.sty
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count285
+\pfg@scount=\count286
+\pfg@temp=\write3
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip59
+\thm@postskip=\skip60
+\thm@headsep=\skip61
+\dth@everypar=\toks29
+)
+\c@teo=\count287
+\c@mydef=\count288
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen172
+\captionmargin@=\dimen173
+\captionwidth=\dimen174
+\caption@tempdima=\dimen175
+\caption@indent=\dimen176
+\caption@parindent=\dimen177
+\caption@hangindent=\dimen178
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count289
+\c@continuedfloat=\count290
+Package caption Info: hyperref package is loaded.
+Package caption Info: subfigure package is loaded.
+)
+\defbaselineskip=\skip62
+
+("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def"
+File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count291
+\l__pdf_internal_box=\box49
+)
+
+LaTeX Warning: Unused global option(s):
+    [letter].
+
+(C:\Users\ADMIN\Desktop\Tesis\build\EV.aux
+(C:\Users\ADMIN\Desktop\Tesis\build\Secs/P0.aux)
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
+)
+\openout1 = `EV.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+
+("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count292
+\scratchdimen=\dimen179
+\scratchbox=\box50
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen180
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks31
+)
+Package hyperref Info: Link coloring OFF on input line 54.
+ ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\ADMIN\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gettitlestrin
+g.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count298
+)
+LaTeX Info: Redefining \ref on input line 54.
+LaTeX Info: Redefining \pageref on input line 54.
+LaTeX Info: Redefining \nameref on input line 54.
+ (C:\Users\ADMIN\Desktop\Tesis\build\EV.out)
+(C:\Users\ADMIN\Desktop\Tesis\build\EV.out)
+\@outlinefile=\write4
+\openout4 = `EV.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\openout2 = `Secs/P0.aux'.
+
+ (Secs/P0.tex [1
+Non-PDF special ignored!
+<special> header=psfrag.pro
+
+
+{C:/Users/ADMIN/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]) [2]
+Most over/underfulls in first few pages are the fault of dalthesis.
+Ignore all them. If uncorrectable errors occur, notify staff.
+(C:\Users\ADMIN\Desktop\Tesis\build\EV.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write5
+\openout5 = `EV.toc'.
+
+ [3
+
+
+
+]
+(C:\Users\ADMIN\Desktop\Tesis\build\EV.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write6
+\openout6 = `EV.lof'.
+
+ (Secs/T1.tex [4
+
+]
+Cap\IeC {\'\i }tulo 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
+
+ []
+
+Package epstopdf Info: Source file: <Figs/Partes-de-un-coche-electrico-gray.eps
+>
+(epstopdf)                    date: 2021-01-28 00:26:31
+(epstopdf)                    size: 602337 bytes
+(epstopdf)             Output file: <Figs/Partes-de-un-coche-electrico-gray-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:48:36
+(epstopdf)                    size: 40720 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Partes-de-un-coche-ele
+ctrico-gray-eps-converted-to.pdf Figs/Partes-de-un-coche-electrico-gray.eps>
+(epstopdf)             \includegraphics on input line 20.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Partes-de-un-coche-electrico-gray-eps-con
+verted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.
+5> allowed
+<Figs/Partes-de-un-coche-electrico-gray-eps-converted-to.pdf, id=147, 666.49pt 
+x 444.66125pt>
+File: Figs/Partes-de-un-coche-electrico-gray-eps-converted-to.pdf Graphic file 
+(type pdf)
+<use Figs/Partes-de-un-coche-electrico-gray-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Partes-de-un-coche-electrico-gray-eps-converted-t
+o.pdf  used on input line 20.
+(pdftex.def)             Requested size: 216.81pt x 144.64888pt.
+
+LaTeX Warning: Citation `masiero2016electric' on page 1 undefined on input line
+ 25.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+
+LaTeX Warning: Citation `loisel2014large' on page 1 undefined on input line 27.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 
+      [1
+
+]
+
+LaTeX Warning: Citation `soltani2017analysis' on page 2 undefined on input line
+ 29.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+LaTeX Warning: Citation `quiros2019electric' on page 2 undefined on input line 
+31.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 
+      [2 <./Figs/Partes-de-un-coche-electrico-gray-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `Gobierno_Colombia' on page 3 undefined on input line 3
+3.
+
+
+LaTeX Warning: Citation `ley_Gobierno_Colombia' on page 3 undefined on input li
+ne 33.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+
+LaTeX Warning: Citation `coronado2015diseno' on page 3 undefined on input line 
+35.
+
+
+LaTeX Warning: Citation `vagon2019' on page 3 undefined on input line 35.
+
+
+LaTeX Warning: Citation `castro2011diseno' on page 3 undefined on input line 35
+.
+
+
+LaTeX Warning: Citation `amaya&rueda2019' on page 3 undefined on input line 35.
+
+
+
+LaTeX Warning: Citation `ardila2018ubicacion' on page 3 undefined on input line
+ 35.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+LaTeX Warning: Citation `ariza2019educational' on page 3 undefined on input lin
+e 37.
+
+
+LaTeX Warning: Citation `aguillon2012diseno' on page 3 undefined on input line 
+37.
+
+
+LaTeX Warning: Citation `arevalo2014diseno' on page 3 undefined on input line 3
+7.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+[3]
+
+LaTeX Warning: Citation `ramos&soto2013' on page 4 undefined on input line 39.
+
+
+LaTeX Warning: Citation `aguirre2014diseno' on page 4 undefined on input line 3
+9.
+
+
+LaTeX Warning: Citation `martin2016diseno' on page 4 undefined on input line 39
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+[4]) (Secs/T2.tex [5]
+Cap\IeC {\'\i }tulo 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+Package epstopdf Info: Source file: <Figs/PROYECTO_EV.eps>
+(epstopdf)                    date: 2021-03-22 21:17:21
+(epstopdf)                    size: 3482719 bytes
+(epstopdf)             Output file: <Figs/PROYECTO_EV-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:48:48
+(epstopdf)                    size: 31712 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/PROYECTO_EV-eps-conver
+ted-to.pdf Figs/PROYECTO_EV.eps>
+(epstopdf)             \includegraphics on input line 28.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/PROYECTO_EV-eps-converted-to.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/PROYECTO_EV-eps-converted-to.pdf, id=172, 896.34875pt x 299.1175pt>
+File: Figs/PROYECTO_EV-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/PROYECTO_EV-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/PROYECTO_EV-eps-converted-to.pdf  used on input l
+ine 28.
+(pdftex.def)             Requested size: 455.3023pt x 151.9363pt.
+
+Overfull \hbox (21.68231pt too wide) in paragraph at lines 28--29
+ [][] 
+ []
+
+[6
+
+]
+
+LaTeX Warning: Citation `cascajosa2005ingenieria' on page 7 undefined on input 
+line 34.
+
+Package epstopdf Info: Source file: <Figs/carroceria.eps>
+(epstopdf)                    date: 2021-02-16 19:22:31
+(epstopdf)                    size: 2305051 bytes
+(epstopdf)             Output file: <Figs/carroceria-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:48:56
+(epstopdf)                    size: 74052 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/carroceria-eps-convert
+ed-to.pdf Figs/carroceria.eps>
+(epstopdf)             \includegraphics on input line 38.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/carroceria-eps-converted-to.pdf): PDF inc
+lusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/carroceria-eps-converted-to.pdf, id=178, 771.88374pt x 493.845pt>
+File: Figs/carroceria-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/carroceria-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/carroceria-eps-converted-to.pdf  used on input li
+ne 38.
+(pdftex.def)             Requested size: 216.81pt x 138.7127pt.
+Package epstopdf Info: Source file: <Figs/Carroceria-final.eps>
+(epstopdf)                    date: 2021-02-05 15:02:46
+(epstopdf)                    size: 596268 bytes
+(epstopdf)             Output file: <Figs/Carroceria-final-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2021-04-30 19:49:00
+(epstopdf)                    size: 120399 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Carroceria-final-eps-c
+onverted-to.pdf Figs/Carroceria-final.eps>
+(epstopdf)             \includegraphics on input line 47.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Carroceria-final-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Carroceria-final-eps-converted-to.pdf, id=180, 520.94624pt x 563.10374pt>
+
+File: Figs/Carroceria-final-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Carroceria-final-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Carroceria-final-eps-converted-to.pdf  used on in
+put line 47.
+(pdftex.def)             Requested size: 390.25534pt x 421.837pt.
+Package epstopdf Info: Source file: <Figs/Medidas-carro-arriba.eps>
+(epstopdf)                    date: 2021-03-15 10:56:11
+(epstopdf)                    size: 1874675 bytes
+(epstopdf)             Output file: <Figs/Medidas-carro-arriba-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:07
+(epstopdf)                    size: 60386 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Medidas-carro-arriba-e
+ps-converted-to.pdf Figs/Medidas-carro-arriba.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Medidas-carro-arriba-eps-converted-to.pdf
+): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Medidas-carro-arriba-eps-converted-to.pdf, id=182, 505.89pt x 284.06125pt
+>
+File: Figs/Medidas-carro-arriba-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Medidas-carro-arriba-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Medidas-carro-arriba-eps-converted-to.pdf  used o
+n input line 56.
+(pdftex.def)             Requested size: 260.17464pt x 146.09161pt.
+Package epstopdf Info: Source file: <Figs/Medidas-carro-lado.eps>
+(epstopdf)                    date: 2021-03-15 10:56:04
+(epstopdf)                    size: 1874675 bytes
+(epstopdf)             Output file: <Figs/Medidas-carro-lado-eps-converted-to.p
+df>
+(epstopdf)                    date: 2021-04-30 19:49:13
+(epstopdf)                    size: 60817 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Medidas-carro-lado-eps
+-converted-to.pdf Figs/Medidas-carro-lado.eps>
+(epstopdf)             \includegraphics on input line 57.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Medidas-carro-lado-eps-converted-to.pdf):
+ PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Medidas-carro-lado-eps-converted-to.pdf, id=183, 505.89pt x 284.06125pt>
+File: Figs/Medidas-carro-lado-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Medidas-carro-lado-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Medidas-carro-lado-eps-converted-to.pdf  used on 
+input line 57.
+(pdftex.def)             Requested size: 260.17464pt x 146.09161pt.
+[7 <./Figs/PROYECTO_EV-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+LaTeX Warning: Citation `ehsani2018modern' on page 8 undefined on input line 65
+.
+
+[8 <./Figs/carroceria-eps-converted-to.pdf>] [9 <./Figs/Carroceria-final-eps-co
+nverted-to.pdf>] [10 <./Figs/Medidas-carro-arriba-eps-converted-to.pdf> <./Figs
+/Medidas-carro-lado-eps-converted-to.pdf>] [11]
+
+LaTeX Warning: Citation `mohd2014design' on page 12 undefined on input line 126
+.
+
+
+LaTeX Warning: Citation `ehsani2018modern' on page 12 undefined on input line 1
+33.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 155--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+Package epstopdf Info: Source file: <Figs/motor.eps>
+(epstopdf)                    date: 2021-03-15 09:18:24
+(epstopdf)                    size: 107977 bytes
+(epstopdf)             Output file: <Figs/motor-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:15
+(epstopdf)                    size: 17430 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/motor-eps-converted-to
+.pdf Figs/motor.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/motor-eps-converted-to.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/motor-eps-converted-to.pdf, id=236, 231.86626pt x 218.8175pt>
+File: Figs/motor-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/motor-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/motor-eps-converted-to.pdf  used on input line 19
+1.
+(pdftex.def)             Requested size: 173.44534pt x 163.68867pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+[13] [14 <./Figs/motor-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
+
+ []
+
+Package epstopdf Info: Source file: <Figs/Variador.eps>
+(epstopdf)                    date: 2021-03-24 09:13:51
+(epstopdf)                    size: 159868 bytes
+(epstopdf)             Output file: <Figs/Variador-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:18
+(epstopdf)                    size: 23735 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Variador-eps-converted
+-to.pdf Figs/Variador.eps>
+(epstopdf)             \includegraphics on input line 250.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Variador-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Variador-eps-converted-to.pdf, id=250, 100.375pt x 118.4425pt>
+File: Figs/Variador-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Variador-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Variador-eps-converted-to.pdf  used on input line
+ 250.
+(pdftex.def)             Requested size: 130.08731pt x 153.52519pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+[15] [16 <./Figs/Variador-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `rashid2001' on page 17 undefined on input line 259.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+
+ []
+
+Package epstopdf Info: Source file: <Figs/Inversor.eps>
+(epstopdf)                    date: 2021-03-31 11:32:21
+(epstopdf)                    size: 350161 bytes
+(epstopdf)             Output file: <Figs/Inversor-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:21
+(epstopdf)                    size: 45924 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Inversor-eps-converted
+-to.pdf Figs/Inversor.eps>
+(epstopdf)             \includegraphics on input line 292.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Inversor-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Inversor-eps-converted-to.pdf, id=267, 212.795pt x 124.465pt>
+File: Figs/Inversor-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Inversor-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Inversor-eps-converted-to.pdf  used on input line
+ 292.
+(pdftex.def)             Requested size: 216.81pt x 126.81967pt.
+
+LaTeX Warning: Citation `ariza2019educational' on page 17 undefined on input li
+ne 302.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--303
+
+ []
+
+[17]
+Package epstopdf Info: Source file: <Figs/Cuadro-sinoptico.eps>
+(epstopdf)                    date: 2021-03-31 14:00:53
+(epstopdf)                    size: 600484 bytes
+(epstopdf)             Output file: <Figs/Cuadro-sinoptico-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2021-04-30 19:49:25
+(epstopdf)                    size: 12829 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Cuadro-sinoptico-eps-c
+onverted-to.pdf Figs/Cuadro-sinoptico.eps>
+(epstopdf)             \includegraphics on input line 308.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Cuadro-sinoptico-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Cuadro-sinoptico-eps-converted-to.pdf, id=273, 353.32pt x 129.48375pt>
+File: Figs/Cuadro-sinoptico-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Cuadro-sinoptico-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Cuadro-sinoptico-eps-converted-to.pdf  used on in
+put line 308.
+(pdftex.def)             Requested size: 346.89731pt x 127.13225pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
+
+ []
+
+[18 <./Figs/Inversor-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+
+ []
+
+Package epstopdf Info: Source file: <Figs/Bateria.eps>
+(epstopdf)                    date: 2021-03-31 11:58:11
+(epstopdf)                    size: 124679 bytes
+(epstopdf)             Output file: <Figs/Bateria-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:27
+(epstopdf)                    size: 17940 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Bateria-eps-converted-
+to.pdf Figs/Bateria.eps>
+(epstopdf)             \includegraphics on input line 350.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Bateria-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Bateria-eps-converted-to.pdf, id=285, 124.465pt x 73.27374pt>
+File: Figs/Bateria-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Bateria-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Bateria-eps-converted-to.pdf  used on input line 
+350.
+(pdftex.def)             Requested size: 173.44534pt x 102.11739pt.
+Package epstopdf Info: Source file: <Figs/Cargador.eps>
+(epstopdf)                    date: 2021-04-16 10:16:22
+(epstopdf)                    size: 379024 bytes
+(epstopdf)             Output file: <Figs/Cargador-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:30
+(epstopdf)                    size: 38230 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Cargador-eps-converted
+-to.pdf Figs/Cargador.eps>
+(epstopdf)             \includegraphics on input line 351.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Cargador-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/Cargador-eps-converted-to.pdf, id=286, 426.59375pt x 434.62375pt>
+File: Figs/Cargador-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/Cargador-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Cargador-eps-converted-to.pdf  used on input line
+ 351.
+(pdftex.def)             Requested size: 173.44534pt x 176.71135pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--359
+
+ []
+
+[19 <./Figs/Cuadro-sinoptico-eps-converted-to.pdf>] [20 <./Figs/Bateria-eps-con
+verted-to.pdf> <./Figs/Cargador-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figs/cadena.eps>
+(epstopdf)                    date: 2021-04-16 10:24:25
+(epstopdf)                    size: 312310 bytes
+(epstopdf)             Output file: <Figs/cadena-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:33
+(epstopdf)                    size: 44484 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/cadena-eps-converted-t
+o.pdf Figs/cadena.eps>
+(epstopdf)             \includegraphics on input line 365.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/cadena-eps-converted-to.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/cadena-eps-converted-to.pdf, id=308, 466.74374pt x 326.21875pt>
+File: Figs/cadena-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/cadena-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/cadena-eps-converted-to.pdf  used on input line 3
+65.
+(pdftex.def)             Requested size: 173.44534pt x 121.22667pt.
+[21 <./Figs/cadena-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 377--380
+
+ []
+
+Package epstopdf Info: Source file: <Figs/cadena_pinones.eps>
+(epstopdf)                    date: 2021-04-16 11:29:58
+(epstopdf)                    size: 196267 bytes
+(epstopdf)             Output file: <Figs/cadena_pinones-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:35
+(epstopdf)                    size: 23712 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/cadena_pinones-eps-con
+verted-to.pdf Figs/cadena_pinones.eps>
+(epstopdf)             \includegraphics on input line 385.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/cadena_pinones-eps-converted-to.pdf): PDF
+ inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/cadena_pinones-eps-converted-to.pdf, id=318, 354.32375pt x 266.9975pt>
+File: Figs/cadena_pinones-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/cadena_pinones-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/cadena_pinones-eps-converted-to.pdf  used on inpu
+t line 385.
+(pdftex.def)             Requested size: 195.12767pt x 147.04054pt.
+[22 <./Figs/cadena_pinones-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figs/rueda.eps>
+(epstopdf)                    date: 2021-04-16 10:20:47
+(epstopdf)                    size: 1303640 bytes
+(epstopdf)             Output file: <Figs/rueda-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:40
+(epstopdf)                    size: 66900 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/rueda-eps-converted-to
+.pdf Figs/rueda.eps>
+(epstopdf)             \includegraphics on input line 398.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/rueda-eps-converted-to.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/rueda-eps-converted-to.pdf, id=330, 803.0pt x 803.0pt>
+File: Figs/rueda-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/rueda-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/rueda-eps-converted-to.pdf  used on input line 39
+8.
+(pdftex.def)             Requested size: 130.08731pt x 130.08774pt.
+Package epstopdf Info: Source file: <Figs/balinera.eps>
+(epstopdf)                    date: 2021-04-17 11:17:41
+(epstopdf)                    size: 108022 bytes
+(epstopdf)             Output file: <Figs/balinera-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:43
+(epstopdf)                    size: 9473 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/balinera-eps-converted
+-to.pdf Figs/balinera.eps>
+(epstopdf)             \includegraphics on input line 406.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/balinera-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/balinera-eps-converted-to.pdf, id=332, 229.85875pt x 220.825pt>
+File: Figs/balinera-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/balinera-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/balinera-eps-converted-to.pdf  used on input line
+ 406.
+(pdftex.def)             Requested size: 108.405pt x 104.14493pt.
+[23 <./Figs/rueda-eps-converted-to.pdf>] [24 <./Figs/balinera-eps-converted-to.
+pdf>]
+Package epstopdf Info: Source file: <Figs/Modelo-Blender-Enumerado.eps>
+(epstopdf)                    date: 2021-05-01 19:44:19
+(epstopdf)                    size: 1309654 bytes
+(epstopdf)             Output file: <Figs/Modelo-Blender-Enumerado-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2021-05-01 21:40:09
+(epstopdf)                    size: 68475 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/Modelo-Blender-Enumera
+do-eps-converted-to.pdf Figs/Modelo-Blender-Enumerado.eps>
+(epstopdf)             \includegraphics on input line 418.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/Modelo-Blender-Enumerado-eps-converted-to
+.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowe
+d
+<Figs/Modelo-Blender-Enumerado-eps-converted-to.pdf, id=349, 353.32pt x 284.061
+25pt>
+File: Figs/Modelo-Blender-Enumerado-eps-converted-to.pdf Graphic file (type pdf
+)
+<use Figs/Modelo-Blender-Enumerado-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/Modelo-Blender-Enumerado-eps-converted-to.pdf  us
+ed on input line 418.
+(pdftex.def)             Requested size: 216.81pt x 174.31302pt.
+[25 <./Figs/Modelo-Blender-Enumerado-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Figs/sticker.eps>
+(epstopdf)                    date: 2021-02-11 02:43:20
+(epstopdf)                    size: 487156 bytes
+(epstopdf)             Output file: <Figs/sticker-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:49:54
+(epstopdf)                    size: 28370 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/sticker-eps-converted-
+to.pdf Figs/sticker.eps>
+(epstopdf)             \includegraphics on input line 429.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/sticker-eps-converted-to.pdf): PDF inclus
+ion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/sticker-eps-converted-to.pdf, id=358, 506.89375pt x 471.7625pt>
+File: Figs/sticker-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/sticker-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/sticker-eps-converted-to.pdf  used on input line 
+429.
+(pdftex.def)             Requested size: 130.08731pt x 121.07167pt.
+Package epstopdf Info: Source file: <Figs/circuito_control.eps>
+(epstopdf)                    date: 2021-05-01 22:03:18
+(epstopdf)                    size: 615120 bytes
+(epstopdf)             Output file: <Figs/circuito_control-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2021-05-01 22:03:36
+(epstopdf)                    size: 79455 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/circuito_control-eps-c
+onverted-to.pdf Figs/circuito_control.eps>
+(epstopdf)             \includegraphics on input line 441.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/circuito_control-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/circuito_control-eps-converted-to.pdf, id=360, 644.4075pt x 469.755pt>
+File: Figs/circuito_control-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/circuito_control-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/circuito_control-eps-converted-to.pdf  used on in
+put line 441.
+(pdftex.def)             Requested size: 433.62pt x 316.11046pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+
+ []
+
+[26 <./Figs/sticker-eps-converted-to.pdf>] [27 <./Figs/circuito_control-eps-con
+verted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 452--455
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 458--459
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+
+ []
+
+[28]
+Package epstopdf Info: Source file: <Figs/circuito_electronico.eps>
+(epstopdf)                    date: 2021-05-11 03:10:49
+(epstopdf)                    size: 131848 bytes
+(epstopdf)             Output file: <Figs/circuito_electronico-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2021-05-11 03:11:26
+(epstopdf)                    size: 37109 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/circuito_electronico-e
+ps-converted-to.pdf Figs/circuito_electronico.eps>
+(epstopdf)             \includegraphics on input line 478.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/circuito_electronico-eps-converted-to.pdf
+): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/circuito_electronico-eps-converted-to.pdf, id=385, 730.73pt x 513.92pt>
+File: Figs/circuito_electronico-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/circuito_electronico-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/circuito_electronico-eps-converted-to.pdf  used o
+n input line 478.
+(pdftex.def)             Requested size: 433.62pt x 304.96672pt.
+[29]
+Package epstopdf Info: Source file: <Figs/pcb3d.eps>
+(epstopdf)                    date: 2021-05-11 00:43:35
+(epstopdf)                    size: 2073593 bytes
+(epstopdf)             Output file: <Figs/pcb3d-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-05-11 00:46:18
+(epstopdf)                    size: 75540 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/pcb3d-eps-converted-to
+.pdf Figs/pcb3d.eps>
+(epstopdf)             \includegraphics on input line 487.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/pcb3d-eps-converted-to.pdf): PDF inclusio
+n: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/pcb3d-eps-converted-to.pdf, id=391, 644.4075pt x 531.9875pt>
+File: Figs/pcb3d-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/pcb3d-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/pcb3d-eps-converted-to.pdf  used on input line 48
+7.
+(pdftex.def)             Requested size: 195.12767pt x 161.08298pt.
+Package epstopdf Info: Source file: <Figs/PCB_gray.eps>
+(epstopdf)                    date: 2021-05-11 00:53:26
+(epstopdf)                    size: 1325615 bytes
+(epstopdf)             Output file: <Figs/PCB_gray-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-05-11 00:54:50
+(epstopdf)                    size: 82568 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/PCB_gray-eps-converted
+-to.pdf Figs/PCB_gray.eps>
+(epstopdf)             \includegraphics on input line 488.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/PCB_gray-eps-converted-to.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/PCB_gray-eps-converted-to.pdf, id=392, 512.91624pt x 426.59375pt>
+File: Figs/PCB_gray-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/PCB_gray-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/PCB_gray-eps-converted-to.pdf  used on input line
+ 488.
+(pdftex.def)             Requested size: 195.12767pt x 162.28957pt.
+Package epstopdf Info: Source file: <Figs/volante_pcb.eps>
+(epstopdf)                    date: 2021-04-29 01:25:43
+(epstopdf)                    size: 455705 bytes
+(epstopdf)             Output file: <Figs/volante_pcb-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-30 19:51:30
+(epstopdf)                    size: 30025 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/volante_pcb-eps-conver
+ted-to.pdf Figs/volante_pcb.eps>
+(epstopdf)             \includegraphics on input line 489.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/volante_pcb-eps-converted-to.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/volante_pcb-eps-converted-to.pdf, id=393, 471.7625pt x 473.77pt>
+File: Figs/volante_pcb-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/volante_pcb-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/volante_pcb-eps-converted-to.pdf  used on input l
+ine 489.
+(pdftex.def)             Requested size: 195.12767pt x 195.96027pt.
+Package epstopdf Info: Source file: <Figs/fsm.eps>
+(epstopdf)                    date: 2021-05-09 23:42:43
+(epstopdf)                    size: 3819554 bytes
+(epstopdf)             Output file: <Figs/fsm-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-05-09 23:50:02
+(epstopdf)                    size: 81714 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figs/fsm-eps-converted-to.p
+df Figs/fsm.eps>
+(epstopdf)             \includegraphics on input line 498.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./Figs/fsm-eps-converted-to.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<Figs/fsm-eps-converted-to.pdf, id=395, 858.20625pt x 736.7525pt>
+File: Figs/fsm-eps-converted-to.pdf Graphic file (type pdf)
+<use Figs/fsm-eps-converted-to.pdf>
+Package pdftex.def Info: Figs/fsm-eps-converted-to.pdf  used on input line 498.
+
+(pdftex.def)             Requested size: 433.62pt x 372.2538pt.
+[30 <./Figs/circuito_electronico-eps-converted-to.pdf>] [31 <./Figs/pcb3d-eps-c
+onverted-to.pdf> <./Figs/PCB_gray-eps-converted-to.pdf> <./Figs/volante_pcb-eps
+-converted-to.pdf>] [32 <./Figs/fsm-eps-converted-to.pdf>]
+
+LaTeX Warning: Citation `siemens2014' on page 33 undefined on input line 513.
+
+[33] [34])
+No file EV.bbl.
+(C:\Users\ADMIN\Desktop\Tesis\build\EV.aux
+(C:\Users\ADMIN\Desktop\Tesis\build\Secs/P0.aux)
+LaTeX Info: Redefining \. on input line 26.
+LaTeX Info: Redefining \% on input line 26.
+)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `EV.out' has not changed.
+(rerunfilecheck)             Checksum: 45EE78163C61943B5015CE84349DB428;1070.
+ ) 
+Here is how much of TeX's memory you used:
+ 9927 strings out of 479618
+ 153028 string characters out of 2874902
+ 478442 words of memory out of 3000000
+ 26791 multiletter control sequences out of 15000+200000
+ 412263 words of font info for 59 fonts, out of 3000000 for 9000
+ 1142 hyphenation exceptions out of 8191
+ 71i,10n,74p,1440b,427s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1095.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on C:\Users\ADMIN\Desktop\Tesis\build\EV.pdf (38 pages, 1423298 
+bytes).
+PDF statistics:
+ 512 PDF objects out of 1000 (max. 8388607)
+ 85 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+

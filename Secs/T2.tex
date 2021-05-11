@@ -1,0 +1,549 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%                                Capítulo 2
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+\chapter{Diseño del prototipo de vehículo eléctrico}\label{chap2}
+% ------------------------------------------------------------------------
+Para construir el prototipo de vehículo eléctrico se requiere definir en
+primera instancia una parte muy importante que abarca todas las posibles
+consideraciones ergonómicas, mecánicas y dinámicas del vehículo; es decir, su \emph{carrocería}.
+Posteriormente, deberá acoplarse un sistema de propulsión eléctrica ajustado a las condiciones
+de carga mecánica del prototipo para facilitar su movimiento y gobernar su conducción mediante comandos de tipo electrónico.\\
+
+El presente \emph{Capítulo} aborda los anteriores conceptos a partir del dimensionamiento de los
+elementos requeridos para la construcción del vehículo y su respectivo ensamble y
+configuración experimental.
+% ------------------------------------------------------------------------
+\section{Etapas principales del sistema}
+% ------------------------------------------------------------------------
+La Fig. \ref{Diagrama_bloques} ilustra el diagrama de bloques para las etapas más importantes del prototipo de vehículo eléctrico a ser implementando. Como se observa, dichas etapas se dividen en partes mecánicas y eléctricas.\\
+
+A continuación se abordará la explicación detallada para cada una de ellas, en orden cronológico de aparición durante el proceso de diseño y ensamble del vehículo, describiendo todas sus características técnicas y aspectos operativos.
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=1.05\textwidth]{Figs/PROYECTO_EV.eps}
+\caption{Diagrama de bloques funcional para el prototipo de vehículo}\label{Diagrama_bloques}
+\end{figure}
+% ------------------------------------------------------------------------
+\subsection{Carrocería}
+% ------------------------------------------------------------------------
+Esta parte del sistema corresponde con un armazón metálico que soporta el peso del tren de potencia y el conductor del vehículo. La Fig. \ref{carroceria} muestra una carrocería típica, cuyas variaciones a nivel comercial incluyen (entre otras) las de tipo: \emph{sedan}, \emph{hatchback} y \emph{station wagon} \cite{cascajosa2005ingenieria}. Evidentemente, diseñar una carrocería requiere el dominio de conocimientos más allá de la base conceptual de un ingeniero electricista o electrónico, y por tanto, se estableció contacto con profesores de la Escuela de Ingeniería Mecánica (EIM) de la Universidad Industrial de Santander (UIS) para acceder a diseños de prototipos para competencias (del tipo \emph{VTH}) o adecuar el chasis de vehículos a gasolina preexistentes. Sin embargo, ninguna de dichas opciones se consideró viable dados los costos de inversión y adecuación en comparación con el presupuesto disponible.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.5\textwidth]{Figs/carroceria.eps}
+\caption{Ilustración para carrocería de un vehículo}\label{carroceria}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Como alternativa, se adquirió (por parte de uno de los autores del trabajo de grado) un chasis \emph{VTH} de segunda mano con la apariencia original mostrada en la Fig. \ref{Carroceria_final}. En adelante, se denominará \emph{chasis} a la parte interna de una carrocería.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.9\textwidth]{Figs/Carroceria-final.eps}
+\caption{Chasis \emph{VTH} adquirido para el trabajo de grado}\label{Carroceria_final}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Entre las características principales del chasis adquirido se tienen: un peso de 20 [kg] aproximadamente, una estructura construida en aluminio, frenado por fricción mecánica y un timón acondicionado a un mecanismo de dirección por palancas. Detalles de la geometría del vehículo y sus dimensiones se presentan en el sólido tridimensional ilustrado en la Fig. \ref{3D}, construido a partir de la herramienta \texttt{Blender} (\texttt{www.blender.org}).
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+		\subfigure[Vista superior]{\includegraphics[width=0.6\textwidth]{Figs/Medidas-carro-arriba.eps}}\\
+		\subfigure[Vista lateral derecha]{\includegraphics[width=0.6\textwidth]{Figs/Medidas-carro-lado.eps}}
+		\caption{Modelo tridimensional con medidas}\label{3D}
+\end{figure}
+% ------------------------------------------------------------------------
+\subsection{Motor eléctrico}
+% ------------------------------------------------------------------------
+El corazón del \emph{tren de potencia} corresponde con el \emph{motor eléctrico}. Para dimensionarlo, es necesario calcular la potencia de la carga mecánica a vencer para producir el movimiento del vehículo.\\
+
+Lo anterior se realizó siguiendo las indicaciones de \emph{Ricardo Alfonso Jaimes Rolón} (Profesor adscrito a la EIM-UIS) y las \emph{Secciones 2.2/2.3} de \cite{ehsani2018modern} ante las siguientes consideraciones:
+% ------------------------------------------------------------------------
+\begin{itemize}
+\item Operación sobre una superficie plana; es decir, lisa, con buen agarre y pendiente cercana a 0°;
+\item Velocidad máxima $v_{cm}$ de 30 [km/h] $\equiv$ 8.33 [m/s], como restricción dada por la \texttt{Ley 1239 de 2008} para circulación en zonas escolares y residenciales como la UIS;
+\item Tiempo de aceleración $t_a$ de 30 [s] desde el reposo, para reducir corrientes de arranque y requerimientos de potencia en el motor;
+\item Masa total del vehículo $m_c$ de 220 [kg] distribuida en: 20 [kg] del chasis, 80 [kg] del pasajero y 120 [kg] del tren de potencia;
+\item Llantas neumáticas para uso en carretillas (momento de inercia $I_r$ calculado asumiendo forma en anillo), con datos promedio dados por: masa $m_r$ de 3.5 [kg], radio externo $r_e$ de 0.2 [m] e interno $r_i$ de 0.1 [m];
+\item Área transversal $A$ expuesta al viento de valor 1.0032 [m$^2$] (calculada con la forma de un trapecio) para una velocidad $v_v$ de 1.3889 [m/s] $\equiv$ 5 [km/h] promedio del viento en Bucaramanga (según \texttt{www.windfinder.com}). Este valor es bajo comparado con la velocidad del sonido, lo cual simplifica los análisis y cálculos matemáticos.
+\end{itemize}\
+% ------------------------------------------------------------------------
+
+A partir de ello, inicialmente se determina la potencia $P_l$ requerida por el motor para vencer la inercia lineal del vehículo y llevarlo desde el reposo hasta la máxima velocidad en el tiempo especificado:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+P_l & = & F_l \times v_{cm}\\
+    & = & 509 \: [W],
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+siendo $F_l$ la fuerza requerida, definida a su vez como:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+F_l & = & m_c \times \left(\frac{v_{cm}}{t_a}\right)\\
+    & = & 220 \times \left(\frac{8.33}{30}\right)\\
+    & = & 220 \times 0.2777\\
+    & = & 61.1 \: [N].
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+
+De otro lado, la potencia $P_r$ requerida por el motor para vencer la inercia rotacional del vehículo y llevarlo desde el reposo hasta la máxima velocidad en el tiempo especificado, puede calcularse como:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+P_r & = & \tau_r \left(\frac{v_{cm}}{r_e}\right)\\
+    & = & 20.24 \: [W],
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+siendo $\tau_r$ el torque requerido, definido a su vez como:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+\tau_r & = & 4 \times I_r \times \left(\frac{\frac{v_{cm}}{r_e}}{t_a}\right)\\
+       & = & 4 \times \left(\frac{m_r}{2}\times\left(r_i^2 + r_e^2\right)\right)\times\left(\frac{\frac{v_{cm}}{r_e}}{t_a}\right)\\
+       & = & 4 \times \left(\frac{3.5}{2}\times\left((0.1)^2+(0.2)^2\right)\right)\times\left(\frac{\frac{8.33}{0.2}}{30}\right)\\
+       & = & 0.486 \: [Nm].
+\end{eqnarray*}\
+% ------------------------------------------------------------------------
+
+Adicionalmente, se deben considerar potencias de pérdida por rodadura $P_p$ (i.e. fricción por contacto con el suelo) y por arrastre del viento $P_a$. Para el primer caso se tiene:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+P_p & = & 4 \times F_p \times v_{cm}\\
+    & = & 395.27 \: [W],
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+siendo $F_p$ la fuerza de oposición ejercida en el punto de contacto, definida a su vez como:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+F_p & = & c_p \times m_c \times g \\
+    & = & 0.0055 \times 220 \times 9.8\\
+    & = & 11.86 \: [N],
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+para un coeficiente de rodadura $c_p$ seleccionado con valor típico para llantas BMX empleadas en vehículos solares \cite{mohd2014design}. A su vez, para el arrastre aerodinámico es posible escribir:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+P_a & = & F_a \times \left(v_v + v_{cm}\right)\\
+    & = & 431 \: [W],
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+siendo $F_a$ la fuerza de oposición ejercida por el viento, definida a su vez como \cite{ehsani2018modern}:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+F_a & = & \frac{\rho}{2} \times c_a \times A \times \left(v_v + v_{cm}\right)^2 \\
+    & = & \frac{1.16}{2} \times 0.81 \times 1.0032 \times \left(1.3889 + 8.33\right)^2\\
+    & \approx & 44 \: [N],
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+para un $c_a$ representando un coeficiente de arrastre, tomado de:
+% ------------------------------------------------------------------------
+\begin{center}
+\texttt{http://aerodyn.org/Drag/tables.html}
+ \end{center}
+% ------------------------------------------------------------------------
+para el caso de un vehículo de competencias. Asimismo, $\rho$ es el valor para la densidad del aire en [kg/m$^3$] a presión atmosférica y 30 [°C].\\
+
+\noindent Finalmente, la potencia requerida por el motor corresponde con:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+P_T & = & P_l + P_r + P_p + P_a\\
+    & = & 509 + 20.24 + 395.27 + 431\\
+    & = & 1355.51 \: [W] \equiv 1.82 \: [HP] \approx 1491.4 \: [W] \equiv 2 \: [HP],
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+aproximando a valores comerciales.\\
+
+Ahora bien, a nivel comercial es posible adquirir motores eléctricos de 2 [HP] con diferentes características constructivas. Por tanto, para abaratar costos de compra y reducir mantenimientos del dispositivo, se optó por un motor de inducción trifásico del tipo jaula de ardilla. A su vez, estos pueden construirse para diferentes características de su relación \emph{par-velocidad} según varias categorías (NEMA \emph{A}, \emph{B}, \emph{C} o \emph{D}) dependiendo de su aplicación.\\
+
+Particularmente, para el caso de un vehículo eléctrico se requiere una máquina que facilite un alto torque en el momento del arranque, siendo el NEMA tipo \emph{C} la opción más recomendada. Sin embargo, por restricciones presupuestales y de disponibilidad comercial se seleccionó un motor SIEMENS NEMA tipo \emph{B} de referencia 1LE0141-0EB46-4AA4-Z D80+ con las características técnicas mostradas en la Tabla \ref{motorparam} y la apariencia física ilustrada en la Fig. \ref{motor}.\\
+% ------------------------------------------------------------------------
+\begin{table}[htbp]
+% ------------------------------------------------------------------------
+\centering
+\caption{Características técnicas de motor}
+{\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{ll}
+% ------------------------------------------------------------------------
+\hline
+Parámetro               & Valor                                                            \\
+\hline
+Potencia nominal        & 2 [HP]                                                           \\
+Velocidad nominal       & 1720 [rpm]                                                       \\
+Torque nominal          & 8.3 [Nm]                                                         \\
+Frecuencia de operación & 60 [Hz]                                                          \\
+Tensión nominal         & 220 $\Delta \Delta$ / 380 $\lambda \lambda$ / 440 $\Delta$ [VAC] \\
+Corriente nomunal       & 5.8 $\Delta \Delta$ / 3.35 $\lambda \lambda$ / 2.9 $\Delta$ [A]  \\
+Corriente de arranque   & 6 [Ia/In]                                                        \\
+Torque de arranque      & 2.6 [Ta/Tn]                                                      \\
+Factor de potencia      & 0.81 [\%]                                                        \\
+Eficiencia              & Alta (IE2)                                                       \\
+\hline
+% ------------------------------------------------------------------------
+\end{tabular}\label{motorparam}}
+% ------------------------------------------------------------------------
+\end{table}
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.4\textwidth]{Figs/motor.eps}
+\caption{Motor de inducción seleccionado}\label{motor}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Una vez seleccionado el motor eléctrico, es posible proceder con la determinación de los elementos
+encargados de suministrar para el mismo la potencia eléctrica de alimentación y la capacidad
+de manejo para sus condiciones operativas.
+% ------------------------------------------------------------------------
+\subsection{Variador de frecuencia}\label{vfdsect}
+% ------------------------------------------------------------------------
+Un variador de frecuencia o VFD (\emph{Variable-Frequency Drive}) es un dispositivo encargado de modificar las condiciones de alimentación de un motor de inducción para alterar su operación. En particular, un VFD mantiene constante el par de la máquina en un rango de velocidades de interés ajustando valores de voltaje y frecuencia de alimentación con relación (V/f) constante. Esto último se conoce comúnmente como \emph{control escalar}.\\
+
+El primer dato a considerar para elegir el variador es la potencia y el tipo de alimentación del motor; es decir: 2 [HP], 220 [VAC] trifásico. Estas deben ser las características de salida del VFD.\\
+
+Asimismo, la mayor parte de los VFD comerciales ofrecen la posibilidad de realizar un frenado electrónico. Entre las modalidades disponibles se pueden mencionar: frenados tipo rampa con parámetros ajustables, por desconexión de alimentación (también denominado \emph{coast}) y dinámico mediante una resistencia externa. Estas opciones de frenado electrónico se complementan con el frenado mecánico disponible en el chasis del vehículo, para garantizar la seguridad del conductor y de las personas en su entorno.\\
+
+Adicionalmente, tomando en cuenta la aplicación particular considerada para el VFD, se requiere que este posea la característica de mando remoto para activar sus funciones operativas desde la comodidad de un panel localizado en el volante del vehículo.\\
+
+De esta manera, dentro de las opciones comerciales disponibles en el mercado que satisfacen los requerimientos anteriores se eligió el variador SIEMENS \emph{Sinamics V20}, con características técnicas resumidas en la Tabla \ref{variadorparam}.\\
+
+La conexión y configuración de operación (en modo local y remoto) para el dispositivo, serán abordadas con detalle en \emph{Secciones} posteriores del presente documento.
+% ------------------------------------------------------------------------
+\begin{table}[htbp]
+% ------------------------------------------------------------------------
+\centering
+\caption{Características técnicas de VFD}
+{\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{ll}
+% ------------------------------------------------------------------------
+\hline
+Parámetro           & Valor                         \\
+\hline
+Fases de entrada    & 1                             \\
+Tensión de red      & 200 ... 240 [V] -15\% +10\%   \\
+Frecuencia de red   & 47 ... 63 [Hz]                \\
+Fases de salida     & 3                             \\
+Tensión de carga    & 230 [V]                       \\
+Potencia nominal    & 1.50 [kW] / 2 [HP]            \\
+Corriente nominal   & 7.8 [A]                       \\
+Factor de potencia  & 0.72                          \\
+Rendimiento         & 0.98                          \\
+\hline
+Entradas digitales  & 4                             \\
+Salidas digitales   & 2                             \\
+Entradas analógicas & 2                             \\
+Salidas analógicas  & 1                             \\
+Comunicaciones      & USS / Modbus RTU              \\
+Opciones de frenado & por resistencia / por rampa / por desconexión\\
+Comando local       & a través de panel BOP (\emph{basic operator panel}) integrado\\
+Comando remoto      & a través de entradas digitales\\
+\hline
+% ------------------------------------------------------------------------
+\end{tabular}\label{variadorparam}}
+% ------------------------------------------------------------------------
+\end{table}
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.3\textwidth]{Figs/Variador.eps}
+\caption{VFD seleccionado}\label{variador}
+\end{figure}
+% ------------------------------------------------------------------------
+\subsection{Inversor de potencia}
+% ------------------------------------------------------------------------
+Un circuito inversor de potencia es un transformador electrónico que entrega en su salida potencia eléctrica en corriente alterna ante una entrada
+de potencia eléctrica en corriente continua. Los inversores son circuitos altamente eficientes que pueden alcanzar rendimientos cercanos al 100\% ante ciertas condiciones.\\
+
+A nivel circuital, un inversor está constituido por arreglos de transistores que operan en modo de conmutación, configurados a partir de diferentes topologías como las de \emph{medio puente}, \emph{puente completo} o \emph{flyback}, y que a su vez pueden ser de tipo \emph{monofásico} o \emph{trifásico} \cite{rashid2001}. El objetivo del presente trabajo de grado no es abordar en profundidad ese tema específico, ni mucho menos proponer el diseño de un circuito inversor de potencia y por tanto, la descripción se limitará a justificar la elección de un dispositivo comercial que resuelva las necesidades particulares para este elemento dentro del esquema general para el vehículo eléctrico definido previamente en la Fig. \ref{Diagrama_bloques}.\\
+
+Más aún, el VFD ya posee como parte importante de su estructura interna un circuito inversor de potencia. Sin embargo, el inversor referido en la presente \emph{Sección} corresponde con la interfaz de alimentación entre la fuente principal del sistema y el conjunto \emph{VFD + motor}.\\
+
+Lo anterior impone las siguientes restricciones: 1) la tensión de salida del inversor debe ser compatible con la tensión de entrada del VFD, 2) la potencia del inversor debe ser al menos la del motor, 3) la entrada del inversor debe ser compatible con los niveles de tensión en corriente continua disponibles comercialmente para baterías en los niveles de potencia de trabajo del sistema.\\
+
+De esta manera, se seleccionó un inversor comercial de marca genérica con características técnicas mostradas en la Tabla \ref{inversorparam} y apariencia física mostrada en la Fig. \ref{inversor_imagen}.
+% ------------------------------------------------------------------------
+\begin{table}[htbp]
+% ------------------------------------------------------------------------
+\centering
+\caption{Características técnicas del inversor de potencia}
+{\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{ll}
+% ------------------------------------------------------------------------
+\hline
+Parámetro     	     	& Valor			\\
+\hline
+Potencia continua  		& 2000 [W]		\\
+Potencia pico      		& 4000 [W]		\\
+Tensión de salida  		& 220 [VAC]		\\
+Frecuencia de salida	& 50 [Hz]		\\
+Tensión de entrada		& 12 [VDC]		\\
+Tipo de onda  	 		& Senoidal pura	\\
+Puertos de salida  		& 1 monofásico	\\
+\hline
+% ------------------------------------------------------------------------
+\end{tabular}\label{inversorparam}}
+% ------------------------------------------------------------------------
+\end{table}
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.5\textwidth]{Figs/Inversor.eps}
+\caption{Inversor de potencia seleccionado}\label{inversor_imagen}
+\end{figure}
+% ------------------------------------------------------------------------
+\subsection{Batería}
+% ------------------------------------------------------------------------
+La fuente de energía primaria en vehículos eléctricos varía dependiendo de la gama
+tecnológica y el fabricante. Lo anterior implica que los bancos de baterías no son
+la única manera de suministrar la potencia requerida por esta clase de vehículos, aunque quizás
+sean todavía la alternativa más popular. Otras opciones incluyen las celdas de combustible y en menor proporción
+los volantes de inercia, estos últimos principalmente para un almacenamiento residual de la energía. Ideas más osadas pueden incluir vehículos eléctricos con celdas solares o miniturbinas y túneles de viento para capturar energía durante su movimiento \cite{ariza2019educational}.\\
+
+Ahora bien, el prototipo a ser implementado utilizará la opción más viable desde el punto de vista técnico y económico: \emph{baterías}. No obstante, realizar la elección de una batería para un vehículo eléctrico implica tener una noción (al menos básica) de las diferentes gamas y tipos que existen comercialmente para este tipo de producto, evitando así realizar una mala inversión que redunde en el funcionamiento inapropiado de todo el sistema.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.8\textwidth]{Figs/Cuadro-sinoptico.eps}
+\caption{Cuadro resumen para principales tipos de batería}\label{cuadro_sinoptico}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Al respecto, la Fig. \ref{cuadro_sinoptico} presenta un cuadro sinóptico que resume a grandes rasgos los tipos principales de baterías eléctricas actuales. De ellos, se destaca la de uso \emph{automotriz}, que para este caso no sería recomendable debido a que son construidas para proporcionar potencia sólo en el proceso de ignición de vehículos a gasolina. En constraste, las baterías de \emph{ciclo profundo} son propicias para trabajo prolongado. Estas a su vez se pueden encontrar en versiones de \emph{Plomo-ácido} y \emph{Ión-Litio}, de las cuales la segunda posee desempeño superior pero también es mucho más costosa. Por su parte en las \emph{Plomo-ácido} pueden distinguirse dos subcategorías: la \emph{inundadas} (de placas tubulares o planas) y las \emph{selladas} (en AGM o Gel). La desventaja de las \emph{inundadas} radica en su constante necesidad de mantenimiento, incluso requiriendo agregar agua destilada. Por su parte en el caso de las \emph{selladas} la tecnología \emph{Gel} suele degradarse cuando se expone a altas temperaturas.\\
+
+Por tanto, los argumentos anteriores permiten concluir que una batería de \emph{ciclo profundo}, \emph{Plomo-ácido}, \emph{sellada} y del tipo \emph{AGM} (separador de vidrio absorbente) representa la opción tecnológica más adecuada a ser implementada como fuente primaria principal del prototipo de vehículo eléctrico.\\
+
+De esta manera siendo la potencia del motor 2 [HP] $\approx$ 1500 [W] y tomando en cuenta las restricciones en la tensión de corriente continua a la entrada del inversor de potencia, la corriente proporcionada por la batería (ante un escenario de elementos ideales y máxima carga) deberá ser:
+% ------------------------------------------------------------------------
+$$
+\frac{1500 \: [W]}{12 \: [VDC]} = 125 \: [A].
+$$\
+% ------------------------------------------------------------------------
+
+Comercialmente, fue posible adquirir una batería NETION de ciclo profundo AGM de 12 [VDC] / 150 [Ah] con características adicionales mostradas en la Tabla \ref{bateriaparam} y apariencia física según la Fig. \ref{bateria_imagen}. A partir de ello, se aspira satisfacer la operación del sistema en un rango de máxima carga por un tiempo prolongado (de al menos 30 minutos). Adicionalmente, se adquirió un cargador de baterías genérico con apariencia similar a la mostrada en la Fig. \ref{cargador} que supone un tiempo total de carga de 6 horas.
+% ------------------------------------------------------------------------
+\begin{table}[htbp]
+% ------------------------------------------------------------------------
+\centering
+\caption{Características técnicas de batería}
+{\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{ll}
+% ------------------------------------------------------------------------
+\hline
+Parámetro     	     					& Valor					\\
+\hline
+Resistencia interna a carga completa	& 3.5 [m$\Omega$]		\\
+Máxima pendiente de descarga     		& 1200 [A] / 5 [s]		\\
+Corriente de carga máxima				& 45 [A]				\\
+Autodescarga (25 °C, 12 meses)  		& 35\% 					\\
+Dimensiones (Largo x Ancho x Alto)		& 485 x 172 x 240 [mm]	\\
+Peso aproximado 						& 45.5 [kg]				\\
+\hline
+% ------------------------------------------------------------------------
+\end{tabular}\label{bateriaparam}}
+% ------------------------------------------------------------------------
+\end{table}
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+		\subfigure[Batería]{\includegraphics[width=0.4\textwidth]{Figs/Bateria.eps}\label{bateria_imagen}}\\
+		\subfigure[Cargador]{\includegraphics[width=0.4\textwidth]{Figs/Cargador.eps}\label{cargador}}
+		\caption{Batería y cargador de batería seleccionados}
+\end{figure}
+% ------------------------------------------------------------------------
+\subsection{Acople de tracción mecánica}
+% ------------------------------------------------------------------------
+Para transferir la potencia mecánica del motor eléctrico a la carga mecánica
+representada por las partes del vehículo eléctrico, se realizó un acople mecánico.\\
+
+Inicialmente, respetando el diseño original del chasis del vehículo
+se conservó la tracción en las ruedas traseras. A partir de ello, se analizaron diferentes opciones para ejecutar la interconexión entre el eje del motor eléctrico y el eje de las ruedas, siendo quizás la más apropiada una caja reductora de engranajes cónicos que permitiese, además de un acople sin pérdidas, ubicar el motor en posición ortogonal al eje de rotación de las ruedas para mejorar el aprovechamiento de espacio. Sin embargo, al momento de cotizar este tipo de acople se encontró que superaba notablemente las expectativas de presupuesto del proyecto y por tanto, se propuso una solución alternativa y más económica, correspondiente con dos ruedas dentadas (engranajes) y un acople a través de cadena como el ilustrado en la Fig. \ref{cadena}.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.4\textwidth]{Figs/cadena.eps}
+\caption{Acople de engranajes por cadena}\label{cadena}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Para realizar el dimensionamiento de los engranajes, se consideró la relación de transformación $N$ a máxima velocidad:
+% ------------------------------------------------------------------------
+\begin{eqnarray*}
+N &=& \frac{\omega_2}{\omega_1} = \frac{v_{cm} \: [rpm]}{1720 \: [rpm]}\\
+  &=& \frac{ \left( \frac{8.33 \: [m/s]}{2 \times \pi \times r_e \: [m/rev]} \times \frac{60 \: [s]}{1 \: [min]}\right)}{1720 \: [rpm]}\\
+  &=& \frac{ \left( 6.6288 \: [rev/s] \times \frac{60 \: [s]}{1 \: [min]}\right)}{1720 \: [rpm]}\\
+  &=& \frac{397.73 \: [rpm]}{1720 \: [rpm]} = 0.23 \approx \frac{1}{5},
+\end{eqnarray*}
+% ------------------------------------------------------------------------
+ante una operación de motor a velocidad nominal.\\
+
+A partir de ello, se acudió a un taller de metalmecánica para construir dos ruedas de acero inoxidable, una con 9 dientes (equivalentes a 2 [cm] de radio) acoplada el eje del motor y otra con 45 dientes (equivalentes a 10 [cm] de radio) acoplada al eje de las ruedas. Asimismo, se empleó una cadena de acero de 95 [cm] de largo para una distancia efectiva entre ejes de 30 [cm] aproximadamente. El montaje final para el acople de tracción mecánica se visualiza en la Fig. \ref{cadena_pinones}.
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.45\textwidth]{Figs/cadena_pinones.eps}
+\caption{Acople real implementado en el vehículo}\label{cadena_pinones}
+\end{figure}
+% ------------------------------------------------------------------------
+\section{Adecuaciones mecánicas}
+% ------------------------------------------------------------------------
+El chasis adquirido para el desarrollo del proyecto (previamente mostrado en las Figs. \ref{Carroceria_final} y \ref{3D}) fue construido con un propósito diferente al de un vehículo eléctrico, y por tanto, fue necesario acondicionar dicha estructura de base para tener un mejor desempeño desde el punto de vista mécanico (motríz) y ergonómico. Así, adicional al acople de tracción mecánica explicado en la \emph{Sección} anterior, se definieron y ejecutaron las siguientes adecuaciones:
+% ------------------------------------------------------------------------
+\begin{itemize}
+\item[a)] \emph{Utilizar un nuevo conjunto de ruedas que soporte el peso del chasis, el pasajero y de todos los dispositivos eléctricos a ser agregados}. Para ello se incluyeron 4 ruedas neumáticas de 40 [cm] de diámetro y con capacidad de soportar hasta 150 [kg] cada una. La Fig. \ref{rueda} ilustra la apariencia física de las ruedas utilizadas;
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.3\textwidth]{Figs/rueda.eps}
+\caption{Rueda neumática seleccionada}\label{rueda}
+\end{figure}
+% ------------------------------------------------------------------------
+\item[b)] \emph{Realizar el acople de las ruedas con los ejes delantero y trasero del vehículo}. En particular, las ruedas empleadas poseen un acople tipo macho y debido a esto fue necesario acondicionar un rodamiento mediante chumaceras (balineras troqueladas de 5/8'') para facilitar el movimiento de cada eje. Para el caso de las ruedas delanteras, un extremo de la chumacera fue soldado al acople mientras el otro fue asegurado por tornillos al mecanismo de giro (dirección), permitiendo un movimiento libre e independiente de cada eje delantero (izquierdo y derecho). Por su parte, las ruedas traseras fueron conectadas a través de un tornillo al vástago del eje en el punto de acople. Posteriormente, dicho vástago fue acoplado a la cara interna de dos chumaceras equidistantes a lo largo de su longitud, con el extremo externo de las chumaceras asegurado por tornillos al chasis del vehículo. De esta manera se obtuvo un rodamiento sin fricción ni vibraciones al momento de aplicarse tracción mecánica por parte de los engranajes. La Fig. \ref{rodamientos} ilustra la apariencia física de los rodamientos utilizados;
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.25\textwidth]{Figs/balinera.eps}
+\caption{Rodamientos empleados en adecuaciones}\label{rodamientos}
+\end{figure}
+% ------------------------------------------------------------------------
+\item[c)] \emph{Utilizar una placa rígida en la base del vehículo para soportar el peso de los elementos eléctricos seleccionados en el tren de potencia}. Para este propósito se empleó una lámina de aluminio (lisa) de 2.5 [mm] de espesor y 5200 [cm$^2$] de área aproximadamente (un trapecio con bases de 54.5 [cm] y 40.5 [cm], y altura 110 [cm]);
+\item[d)] \emph{Modificar las proporciones de espacio del pasajero al interior de la cabina}. En este caso se realizaron tres modificaciones principales: i) incrementar la altura del asiento (34 [cm] desde su posición original), ii) mover el asiento hacia atrás hasta el máximo tope permitido por la estructura (travesaño trasero) y iii) ajustar la altura del volante a la nueva altura del asiento de manera tal que existieran 20 [cm] de espacio entre ellos para facilitar la movilidad de las piernas del conductor;
+\item[e)] \emph{Incrementar el ángulo de maniobra de giro para las ruedas delanteras}. Los ajustes descritos previamente para el acople de las ruedas delanteras al mecanismo de giro (dirección), permitieron obtener una distancia de alrededor 10 [cm] entre el chasis del vehículo y los ejes de las ruedas, facilitando realizar maniobras de giro con ángulo suficiente (de hasta 30°) durante la conducción. Este aspecto es relevante, pues al momento de seleccionar un nuevo conjunto de ruedas no había garantía que las mismas se ajustaran apropiadamente al diseño original del vehículo;
+\item[f)] \emph{Realizar limpieza y pintura del chasis modificado}. Para ello se empleó pintura electrostática de color \texttt{verde 6018}, que identifica a la Universidad Industrial de Santander;
+\item[g)] \emph{Distribuir los elementos eléctricos del tren de potencia en la geometría del vehículo modificado}. Sobre la base del modelo tridimensional presentado en la Fig. \ref{Modelo_Blender_2}, se realizó la distribución espacial para los elementos principales del tren de potencia que representan las componentes eléctricas del diagrama de bloques definido en la Fig. \ref{Diagrama_bloques} para el prototipo de vehículo. La distribución del espacio se realizó siguiendo el sentido común y tratando de combinar aspectos de confort y seguridad para el pasajero;
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.5\textwidth]{Figs/Modelo-Blender-Enumerado.eps}
+\caption{Modelo tridimensional para ubicación de equipos en vehículo modificado: 1) batería, 2) inversor, 3) VFD, 4) motor, 5) mando electrónico, 6) acople de tracción mecánica y 7) carrocería}
+\label{Modelo_Blender_2}
+\end{figure}
+% ------------------------------------------------------------------------
+\item[h)] \emph{Fijación de elementos eléctricos del tren de potencia al chasis del vehículo modificado}. Para asegurar la batería a la estructura se utilizaron perfiles de aluminio en forma de L (o chapetas) de 1/4'' de grosor, ajustados al perímetro de la forma rectangular y asegurados a la lámina de base mediante remaches. Usa solución similar fue empleada para el inversor de potencia. Por su parte el motor fue fijado a la lámina de base empleando tornillos con tuerca de 1/2'' a través de perforaciones alargadas para ajustar la tensión mecánica de la cadena. Finalmente, el variador de velocidad fue atornillado a una placa de aluminio fijada con remaches a un riel omega, a su vez fijado con remaches al travesaño trasero del vehículo;
+% ------------------------------------------------------------------------
+\item[i)] \emph{Diseño de identidad visual}. Se agregaron logotipos de identidad visual al prototipo de vehículo eléctrico, empleando diseños preexistentes que identifican a la Universidad Industrial de Santander y a la Escuela de Ingenierías Eléctrica, Electrónica y de Telecomunicaciones. Adicionalmente, se construyó un logotipo especial para el proyecto denominado por los autores: \texttt{E3carT}. Dichos logotipos se ilustran en la Fig. \ref{Stickers} y fueron adheridos al vehículo a manera de calcomanías.
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=0.3\textwidth]{Figs/sticker.eps}
+\caption{Identidad visual para prototipo de vehículo eléctrico}\label{Stickers}
+\end{figure}
+% ------------------------------------------------------------------------
+\end{itemize}
+% ------------------------------------------------------------------------
+\section{Adecuaciones eléctricas}
+% ------------------------------------------------------------------------
+La Fig. \ref{cade_simu} muestra la interconexión realizada entre los elementos que constituyen las \emph{componentes eléctricas} del tren de potencia. Dicho diagrama (construido a manera de esquemas de mando y potencia) muestra además de las conexiones, a todos los elementos de accionamiento y protección utilizados.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=1.0\textwidth]{Figs/circuito_control.eps}
+\caption{Esquema de conexiones eléctricas del prototipo: diagrama de mando (derecha) y potencia (izquierda)}\label{cade_simu}
+\end{figure}
+% ------------------------------------------------------------------------
+
+De ellos, se destaca el interruptor denominado \texttt{MASTER} que tiene como función desenergizar la alimentación de todos los dispositivos a partir de la desconexión de la batería. Asimismo, se resalta la inclusión de fusibles de 600 [V] / 30 [A] en las líneas de conexión entre el inversor de potencia y el VFD, para proteger los dispositivos ante una sobrecarga. Adicionalmente, se observa la inclusión de una \texttt{TARJETA DE DESARROLLO} para realizar el control de operación del sistema según se explicará con detalle en la siguiente \emph{Sección}.\\
+
+Por último, es conveniente aclarar que la conexión a tierra de las componentes eléctricas del prototipo se realizó mediante la fijación al chasis de las terminales de tierra monofásica en la salida del inversor y trifásica en la salida del VFD.
+% ------------------------------------------------------------------------
+\section{Adecuaciones electrónicas}
+% ------------------------------------------------------------------------
+Hasta el momento, se ha abordado con detalle el dimensionamiento las componentes eléctricas
+y su acople con las componentes mecánicas del prototipo de vehículo eléctrico. Sin embargo, 
+aún no se ha discutido la manera de operar el tren de potencia.\\
+
+Por tanto, a partir del diagrama de bloques de la Fig. \ref{Diagrama_bloques} y de la descripción técnica para el VFD realizada en la \emph{Subsección} \ref{vfdsect}, es claro que dicho dispositivo constituye la unidad de mando para operación del motor eléctrico y por ende del tren de potencia del vehículo.\\
+
+En particular, es posible operar el VFD en modo local a través de la interfaz de usuario (panel BOP - \emph{basic operator panel}) o en modo remoto haciendo uso de sus puertos de entrada analógicos y digitales. En cualquier caso, la operación del VFD (y por consiguiente del motor eléctrico) se realiza posterior a la configuración de parámetros referidos principalmente a los datos de placa del motor.\\ 
+
+A partir de ello, inicialmente se configuró el VFD asignando valores consistentes a dichos parámetros; es decir: tensión nominal $P0304 = 220$ [V], corriente nominal $P0305 = 5.8$ [A], potencia nominal $P0307 = 1.5$ [kW], factor de potencia $P0308 = 0.81$, frecuencia nominal $P0310 = 60$ [Hz] y velocidad nominal $P0311 = 1720$ [rpm]. Adicionalmente, se configuró una frecuencia de alimentación para el VFD de 50 [Hz] ($P0100 = 0$).\\
+
+Posteriormente, se procedió a diseñar y construir una tarjeta electrónica para realizar la operación remota del VFD (correspondiente con la \texttt{TARJETA DE DESARROLLO} indicada en el \emph{esquema de mando} de la Fig. \ref{cade_simu}), atendiendo a los siguientes requerimientos:
+% ------------------------------------------------------------------------
+\begin{itemize}
+\item[\emph{1)}] Como elementos de entrada se requieren botones para realizar las maniobras de avance y retroceso, respectivamente;
+\item[\emph{2)}] Se requiere un botón adicional para ejecutar la maniobra de frenado eléctrico;
+\item[\emph{3)}] Se requiere un medio para detectar por parte del sistema electrónico la activación del freno mecánico, ejecutando la maniobra de desconexión del tren de potencia eléctrico. Para ello, se ubicó un sensor del tipo FSR (force sensitive resistor) acoplado mecánicamente al pedal del freno. De esta manera, la presión mecánica ejercida por el pedal sobre el dispositivo crea una diferencia de potencial eléctrico en sus terminales constituyendo una señal analógica con niveles de voltaje detectables;
+\item[\emph{4)}] Se requiere un indicador para conocer la condición de operación del vehículo a partir de la elección realizada por el usuario en el mando electrónico. Para este propósito se empleó una pantalle de cristal líquido (LCD) de 16 caracteres y 2 líneas;
+\item[\emph{5)}] Se desea que el sistema electrónico sea de configuración flexible para adecuarse a futuros requerimientos y funcionalidades adicionales. Tomando en cuenta lo anterior, se utilizó como unidad de gestión de información al microcontrolador PIC \texttt{18F4550};
+\item[\emph{6)}] Para confort del usuario, la unidad electrónica de mando deberá ubicarse en un lugar estratégico dentro del vehículo. De esta manera, se decidió localizarla al interior del voltante.
+\end{itemize}
+% ------------------------------------------------------------------------
+
+El diagrama esquemático para el circuito electrónico diseñado, incluyendo los elementos mencionados, se presenta en la Fig. \ref{esquema}. A partir de ello, se destaca el acople entre las salidas digitales del microcontrolador y las entradas digitales del VFD a través de optoacopladores (para elevar los niveles de señal de $5$ [VDC] a $24$ [VDC] \textcolor[rgb]{0.98,0.00,0.00}{\textbf{¿De dónde obtuvieron los $24$ [VDC] si la batería es de $12$ [VDC]?RTA:  La alimentacion DC de la PCB esta dada por el VFD el cual tiene una salida de 24, entrada que esta conectada a la PCB por medio del conector $IN24$ mostrado en \ref{esquema}}}, la conversión paralelo a serie entre la pantalla LCD y el microcontrolador a través de un convertidor \texttt{I2C} de referencia \texttt{PCF8574} (reduciendo el tamaño del enrutado en la tarjeta) y la regulación de alimentación de 24 [VDC] a 5 [VDC] (para alimentar los elementos del circuito, en su mayoría de tecnología \texttt{TTL}).\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=1.0\textwidth]{Figs/circuito_electronico.eps}
+\caption{Diagrama esquemático para tarjeta electrónica diseñada}\label{esquema}
+\end{figure}		
+
+
+Asimismo, la Fig. \ref{mandoboard} presenta el diseño de la capa de componentes y de ruteado circuital para el montaje del circuito impreso (i.e. \emph{PCB}), al igual que la apariencia final de la tarjeta de mando electrónico incorporada en el volante del vehículo.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+		\subfigure[Capa de componentes]{\includegraphics[width=0.45\textwidth]{Figs/pcb3d.eps}}
+		\subfigure[Capa de ruteado]{\includegraphics[width=0.45\textwidth]{Figs/PCB_gray.eps}}\\
+		\subfigure[Apariencia final en volante]{\includegraphics[width=0.45\textwidth]{Figs/volante_pcb.eps}}
+		\caption{Diseño de tarjeta de mando electrónico.}\label{mandoboard}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Una vez diseñada e implementada la unidad de mando electrónico (hardware), es necesario realizar la implementación del autómata correspondiente a la operación deseada del vehículo. Para ello se definen los estados operativos del sistema a partir de la máquina de estados finita ilustrada en la Fig. \ref{fsm}.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering		
+\includegraphics[width=1.0\textwidth]{Figs/fsm.eps}
+\caption{Máquina de estados de operación para comando electrónico del vehículo}\label{fsm}
+\end{figure}
+% ------------------------------------------------------------------------
+
+A partir de ello, la operación del motor se define empleando las entradas digitales del VFD (\emph{I1 I2 I3 I4}) considerando los siguientes comandos de acción:
+% ------------------------------------------------------------------------
+\begin{itemize}
+\item[\emph{I1}:] Se configuró en modo \emph{ON/OFF1} a partir de la instrucción $P0701=1$. Un nivel de entrada alto activa la operación del VFD, mientras que un nivel de entrada bajo activa un frenado eléctrico tipo rampa con tiempo $P1121=10$ [s];
+\item[\emph{I2}:] Se configuró en modo \emph{selector de frecuencia fija bit0} a partir de la instrucción $P0702=15$. Un nivel de entrada alto activa el giro del motor hacia la izquierda (i.e. \texttt{AVANZA}) a velocidad fija de $P1001=-60$ [Hz], incrementada desde el reposo por una rampa con tiempo $P1121=30$ [s];
+\item[\emph{I3}:] Se configuró en modo \emph{selector de frecuencia fija bit1} a partir de la instrucción $P0703=16$. Un nivel de entrada alto activa el giro del motor hacia la derecha (i.e. \texttt{RETROCEDE}) a velocidad fija de $P1002=30$ [Hz], incrementada desde el reposo por una rampa con tiempo $P1120=10$ [s];
+\item[\emph{I4}:] Se configuró en modo \emph{OFF2 - coast to standstill} a partir de la instrucción $P0704=3$. Un nivel de entrada bajo desactiva el VFD, permitiendo un frenado mecánico en rodadura libre.
+\end{itemize}
+% ------------------------------------------------------------------------
+
+El detalle de todas las instrucciones de configuración para el VFD se encuentran detalladas en el manual proporcionado por el fabricante \cite{siemens2014}.
+
+\newpage
+\begin{center}
+\textcolor[rgb]{0.98,0.00,0.00}{\textbf{HASTA AQUÍ VOY CON LA REVISIÓN.....}}
+\end{center}
+\newpage
+
+%% ------------------------------------------------------------------------
+%\section{Cotizaciones y compra final}
+%% ------------------------------------------------------------------------
+%El día 22 de mayo de 2020 se realizó la siguiente solicitud de gestión de compra de estos equipos vía correo electrónico, a través del Ing. Julián Eduardo Blanco Cortez:\\
+%% ------------------------------------------------------------------------
+%\begin{itemize}
+%\item Un (1) motor de inducción, tipo jaula de ardilla, de 2 HP, 1800 RPM, 60 Hz, 220/230 VAC, tipo NEMA C, con base del tipo "foot mounted". Marcas tentativas del producto: WEG, Siemens, ABB;
+%\item Un (1) variador de frecuencia con salida para motor trifásico (220/230) de 2 HP, con entrada de alimentación monofásica a 120 VAC / 60 Hz, que posea opciones de frenado del tipo: rampa, coast, injection. Marcas tentativas del producto: WEG, Rockwell Automation, SIEMENS, Danfoss;
+%\item Un (1) inversor cargador, de 12 VDC a 120 VAC / 60 Hz, con potencia de 2 kW. Marcas tentativas del producto: Genérica;
+%\item Cinco (5) ruedas neumáticas de 14 pulgadas. Marcas tentativas: Roller;
+%\item Una (1) batería recargable ácido-plomo de 12 V / 120 Ah, de ciclo profundo y peso no mayor a 40 kg. Marcas tentativas: Varta, NPP, Rolls. La imagen del elemento se adjunta al presente correo.
+%\end{itemize}
+%% ------------------------------------------------------------------------
+%A la cual se adjuntaron las imágenes de la Fig. \ref{Elementos_cotizados}.\\
+%
+%% ------------------------------------------------------------------------
+%\begin{figure}[htbp]
+%\centering		
+%\includegraphics[width=0.5\textwidth]{Figs/Elementos-cotizados.eps}
+%\caption[Elementos cotizados]{Imágenes adjuntas al correo en el que se envió la cotización final a la Universidad.}
+%\label{Elementos_cotizados}
+%\end{figure}
+%% ------------------------------------------------------------------------
+%Se inició un estudio de mercado con los proveedores reconocidos por la UIS y se les solicitó enviar la cotización de estos elementos, a la cual contestaron 5 proveedores: CASA HERMES LTDA., DYNAMO ELECTRONICS S.A.S, SUCONEL S.A., NARVAEZ INGENIERÍA S.A.S., y SOLUCIONES INDUSTRIALES INTELIGENTES S.A.S. Estas se adjuntarán como archivos separados.\\
+%
+%De estas se concluyó: la cotización de elementos realizada por CASA HERMES LTDA se presentó como la más completa en cuanto al cumplimiento de las especificaciones técnicas solicitadas. Sin embargo, no fue la oferta más económica, en parte por la cotización de un inversor solar con algoritmo integrado MPPT, innecesario para la aplicación en cuestión. La cotización realizada por DYNAMO ELECTRONICS fue la más económica. Sin embargo, incumplía las restricciones de peso requeridas para la batería (máximo 40 kg), además de no precisar que el motor de inducción cumpla la norma NEMA tipo C, incumpliendo parcialmente las especificaciones requeridas. La cotización realizada por SOLUCIONES INDUSTRIALES INTELIGENTES fue excesivamente costosa comparada con las demás ofertas comerciales, lo cual la hizo inviable. La cotización enviada por SUCONEL fue incompleta, pues no cotizaron el inversor/cargador. Asimismo, cotizaron llantas para vehículos convencionales que no correspondían a los requerimientos solicitados. La cotización enviada por NARVAEZ INGENIERÍA a pesar de incluir todos los elementos, sólo presentó información técnica del variador de frecuencia y del motor. El motor cotizado fue de categoría B, lo cual incumplía el requerimiento solicitado (tipo NEMA C). De los demás elementos no se realizó descripción diferente a la solicitada en el requerimiento inicial.\\
+%
+%Se pidió entonces realizar la compra a CASA HERMES LTDA, y en caso de no ser posible, realizarla a DYNAMO ELECTROICS. Esta última fue la opción escogida.
+% 

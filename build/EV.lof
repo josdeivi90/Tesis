@@ -1,0 +1,30 @@
+\babel@toc {spanish}{}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Partes principales de un EV}}{2}{figure.caption.3}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagrama de bloques funcional para el prototipo de veh\IeC {\'\i }culo\relax }}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ilustraci\'on para carrocer\IeC {\'\i }a de un veh\IeC {\'\i }culo\relax }}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Chasis \emph {VTH} adquirido para el trabajo de grado\relax }}{9}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Modelo tridimensional con medidas\relax }}{10}{figure.caption.7}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Vista superior}}}{10}{figure.caption.7}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Vista lateral derecha}}}{10}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Motor de inducci\'on seleccionado\relax }}{14}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces VFD seleccionado\relax }}{16}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Inversor de potencia seleccionado\relax }}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Cuadro resumen para principales tipos de bater\IeC {\'\i }a\relax }}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bater\IeC {\'\i }a y cargador de bater\IeC {\'\i }a seleccionados\relax }}{20}{figure.caption.16}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Bater\IeC {\'\i }a}}}{20}{figure.caption.16}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cargador}}}{20}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Acople de engranajes por cadena\relax }}{21}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Acople real implementado en el veh\IeC {\'\i }culo\relax }}{22}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Rueda neum\'atica seleccionada\relax }}{23}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Rodamientos empleados en adecuaciones\relax }}{24}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Modelo tridimensional para ubicaci\'on de equipos en veh\IeC {\'\i }culo modificado: 1) bater\IeC {\'\i }a, 2) inversor, 3) VFD, 4) motor, 5) mando electr\'onico, 6) acople de tracci\'on mec\'anica y 7) carrocer\IeC {\'\i }a\relax }}{25}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Identidad visual para prototipo de veh\IeC {\'\i }culo el\'ectrico\relax }}{26}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Esquema de conexiones el\'ectricas del prototipo: diagrama de mando (derecha) y potencia (izquierda)\relax }}{27}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Diagrama esquem\'atico para tarjeta electr\'onica dise\~nada\relax }}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Dise\~no de tarjeta de mando electr\'onico.\relax }}{31}{figure.caption.25}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Capa de componentes}}}{31}{figure.caption.25}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Capa de ruteado}}}{31}{figure.caption.25}%
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Apariencia final en volante}}}{31}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces M\'aquina de estados de operaci\'on para comando electr\'onico del veh\IeC {\'\i }culo\relax }}{32}{figure.caption.26}%

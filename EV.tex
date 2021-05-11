@@ -1,0 +1,108 @@
+% ------------------------------------------------------------------------
+%
+% ----------------------      Thesis.tex       ---------------------------
+%
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% Versión de plantilla, para realización de informes de trabajo de grado,
+% tomada del ejemplo sugerido en WinEdt 5.3, y modificada para uso de la
+% Universidad Nacional de Colombia - Sede Manizales, en agosto de 2003, y
+% de la Universidad Industrial de Santander en octubre de 2014.
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%
+% ------------------------------------------------------------------------
+
+\documentclass[letter,oneside,11pt,spanish]{report}          % Encabezados
+
+\usepackage[spanish,es-nodecimaldot]{babel} % Reconocimiento para letras {\~n} y tildes
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx,epstopdf}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+\usepackage{xthesis}                    % Paquete de plantilla predise{\~n}ada
+\usepackage{epsfig}
+\usepackage{amsmath,amssymb,amsfonts}          % Soporte matemático
+\usepackage{hyperref}                          % Hipervínculos y bookmarks
+\usepackage{subfigure}                    % Soporte para múltiples figuras
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{psfrag}
+\usepackage{url}
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+\usepackage{amsthm}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{mydef}{Definición}[section]
+
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+
+\newlength{\defbaselineskip}
+\setlength{\defbaselineskip}{\baselineskip}
+\newcommand{\setlinespacing}[1]%
+           {\setlength{\baselineskip}{#1 \defbaselineskip}}
+\newcommand{\doublespacing}{\setlength{\baselineskip}%
+                           {2.0 \defbaselineskip}}
+\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+\begin{document}                                     % Inicio de documento
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+% Definición silábica de palabras
+
+\hyphenation{pro-por-cio-nal}
+
+
+% ------------------------------------------------------------------------
+
+% Renombramiento para títulos en inglés
+
+\renewcommand\chaptername    {Capítulo}
+\renewcommand\listfigurename {Lista de Figuras}
+\renewcommand\listtablename  {Lista de Tablas}
+\renewcommand\bibname        {Bibliografía}
+\renewcommand\contentsname   {Tabla de Contenido}
+\renewcommand\tablename      {Tabla}
+\renewcommand\appendixname   {Anexo}
+% ------------------------------------------------------------------------
+% Definición para elementos de contenido previo a cuerpo del trabajo
+% ------------------------------------------------------------------------
+\include{Secs/P0}                                                % Portada
+% ------------------------------------------------------------------------
+% Dedicatoria
+%\dedicate {Dedicatoria ...}
+% ------------------------------------------------------------------------
+\beforepreface \setcounter{page}{3}
+% ------------------------------------------------------------------------
+%\include{Secs/res}                                               % Resumen
+%\include{Secs/abs}
+% ------------------------------------------------------------------------
+%\include{Secs/agradecimientos}                           % Agradecimientos
+% ------------------------------------------------------------------------
+\tableofcontents                                      % Tabla de contenido
+% ------------------------------------------------------------------------
+\listoffigures                                 % Lista de figuras y tablas
+%\listoftables
+% ------------------------------------------------------------------------
+% Contenido del Informe
+% ------------------------------------------------------------------------
+% Capítulos
+% ------------------------------------------------------------------------
+\input{Secs/T1} % Introducción
+\input{Secs/T2} % Dimensionamiento y adecuaciones
+%\input{Secs/T2(profesor)} % correccion realizadas por el profesor
+% ------------------------------------------------------------------------
+\bibliographystyle{amsplain}                                % Bibliografía
+\bibliography{xbib}
+% ------------------------------------------------------------------------
+\end{document}                                          % Fin de documento
+% ------------------------------------------------------------------------ 
