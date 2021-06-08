@@ -258,7 +258,7 @@ de potencia eléctrica en corriente continua. Los inversores son circuitos altame
 
 A nivel circuital, un inversor está constituido por arreglos de transistores que operan en modo de conmutación, configurados a partir de diferentes topologías como las de \emph{medio puente}, \emph{puente completo} o \emph{flyback}, y que a su vez pueden ser de tipo \emph{monofásico} o \emph{trifásico} \cite{rashid2001}. El objetivo del presente trabajo de grado no es abordar en profundidad ese tema específico, ni mucho menos proponer el diseño de un circuito inversor de potencia y por tanto, la descripción se limitará a justificar la elección de un dispositivo comercial que resuelva las necesidades particulares para este elemento dentro del esquema general para el vehículo eléctrico definido previamente en la Fig. \ref{Diagrama_bloques}.\\
 
-Más aún, el VFD ya posee como parte importante de su estructura interna un circuito inversor de potencia. Sin embargo, el inversor referido en la presente \emph{Sección} corresponde con la interfaz de alimentación entre la fuente principal del sistema y el conjunto \emph{VFD + motor}.\\
+Más aún, el VFD ya posee como parte importante de su estructura interna un circuito inversor de potencia. Sin embargo, el inversor referido en la presente \emph{Sección} corresponde con la interfaz de alimentación entre la fuente principal del sistema y el conjunto VFD \emph{+ motor}.\\
 
 Lo anterior impone las siguientes restricciones: 1) la tensión de salida del inversor debe ser compatible con la tensión de entrada del VFD, 2) la potencia del inversor debe ser al menos la del motor, 3) la entrada del inversor debe ser compatible con los niveles de tensión en corriente continua disponibles comercialmente para baterías en los niveles de potencia de trabajo del sistema.\\
 
@@ -310,7 +310,7 @@ Ahora bien, el prototipo a ser implementado utilizará la opción más viable desde
 \end{figure}
 % ------------------------------------------------------------------------
 
-Al respecto, la Fig. \ref{cuadro_sinoptico} presenta un cuadro sinóptico que resume a grandes rasgos los tipos principales de baterías eléctricas actuales. De ellos, se destaca la de uso \emph{automotriz}, que para este caso no sería recomendable debido a que son construidas para proporcionar potencia sólo en el proceso de ignición de vehículos a gasolina. En constraste, las baterías de \emph{ciclo profundo} son propicias para trabajo prolongado. Estas a su vez se pueden encontrar en versiones de \emph{Plomo-ácido} y \emph{Ión-Litio}, de las cuales la segunda posee desempeño superior pero también es mucho más costosa. Por su parte en las \emph{Plomo-ácido} pueden distinguirse dos subcategorías: la \emph{inundadas} (de placas tubulares o planas) y las \emph{selladas} (en AGM o Gel). La desventaja de las \emph{inundadas} radica en su constante necesidad de mantenimiento, incluso requiriendo agregar agua destilada. Por su parte en el caso de las \emph{selladas} la tecnología \emph{Gel} suele degradarse cuando se expone a altas temperaturas.\\
+Al respecto, la Fig. \ref{cuadro_sinoptico} presenta un cuadro sinóptico que resume a grandes rasgos los tipos principales de baterías eléctricas actuales. De ellos, se destaca la de uso \emph{automotriz}, que para este caso no sería recomendable debido a que son construidas para proporcionar potencia sólo en el proceso de ignición de vehículos a gasolina. En constraste, las baterías de \emph{ciclo profundo} son propicias para trabajo prolongado. Estas a su vez se pueden encontrar en versiones de \emph{Plomo-ácido} y \emph{Ión-Litio}, de las cuales la segunda posee desempeño superior pero también es mucho más costosa. Por su parte en las \emph{Plomo-ácido} pueden distinguirse dos subcategorías: las \emph{inundadas} (de placas tubulares o planas) y las \emph{selladas} (en AGM o Gel). La desventaja de las \emph{inundadas} radica en su constante necesidad de mantenimiento, incluso requiriendo agregar agua destilada. Por su parte en el caso de las \emph{selladas} la tecnología \emph{Gel} suele degradarse cuando se expone a altas temperaturas.\\
 
 Por tanto, los argumentos anteriores permiten concluir que una batería de \emph{ciclo profundo}, \emph{Plomo-ácido}, \emph{sellada} y del tipo \emph{AGM} (separador de vidrio absorbente) representa la opción tecnológica más adecuada a ser implementada como fuente primaria principal del prototipo de vehículo eléctrico.\\
 
@@ -348,7 +348,7 @@ Peso aproximado 						& 45.5 [kg]				\\
 \begin{figure}[htbp]
 \centering
 		\subfigure[Batería]{\includegraphics[width=0.4\textwidth]{Figs/Bateria.eps}\label{bateria_imagen}}\\
-		\subfigure[Cargador]{\includegraphics[width=0.4\textwidth]{Figs/Cargador.eps}\label{cargador}}
+		\subfigure[Cargador]{\includegraphics[width=0.4\textwidth]{Figs/cargador.eps}\label{cargador}}
 		\caption{Batería y cargador de batería seleccionados}
 \end{figure}
 % ------------------------------------------------------------------------
@@ -449,36 +449,32 @@ Por último, es conveniente aclarar que la conexión a tierra de las componentes e
 % ------------------------------------------------------------------------
 \section{Adecuaciones electrónicas}
 % ------------------------------------------------------------------------
-Hasta el momento, se ha abordado con detalle el dimensionamiento las componentes eléctricas
-y su acople con las componentes mecánicas del prototipo de vehículo eléctrico. Sin embargo, 
-aún no se ha discutido la manera de operar el tren de potencia.\\
+Hasta el momento, se ha abordado con detalle el dimensionamiento de las componentes eléctricas
+y su acople con las componentes mecánicas del prototipo de vehículo eléctrico. Sin embargo,
+aún no se ha discutido la manera de operar el tren de potencia. Por tanto, a partir del diagrama de bloques de la Fig. \ref{Diagrama_bloques} y de la descripción técnica para el VFD realizada en la \emph{Subsección} \ref{vfdsect}, es claro que dicho dispositivo constituye la unidad de mando para operación del motor eléctrico y por ende del tren de potencia del vehículo. En particular, es posible operar el VFD en modo local a través de la interfaz de usuario (panel \emph{BOP} - \emph{basic operator panel}) o en modo remoto haciendo uso de sus puertos de entrada analógicos y digitales.\\
 
-Por tanto, a partir del diagrama de bloques de la Fig. \ref{Diagrama_bloques} y de la descripción técnica para el VFD realizada en la \emph{Subsección} \ref{vfdsect}, es claro que dicho dispositivo constituye la unidad de mando para operación del motor eléctrico y por ende del tren de potencia del vehículo.\\
+En cualquier caso, la operación del VFD (y por consiguiente del motor eléctrico) se realiza posterior a la configuración de los datos de placa del motor, mismos que fueron asignados a través del \emph{BOP} en el modo siguiente: tensión nominal $P0304 = 220$ [V], corriente nominal $P0305 = 5.8$ [A], potencia nominal $P0307 = 1.5$ [kW], factor de potencia $P0308 = 0.81$, frecuencia nominal $P0310 = 60$ [Hz] y velocidad nominal $P0311 = 1720$ [rpm]. Adicionalmente, se configuró una frecuencia de alimentación para el VFD de 50 [Hz] ($P0100 = 0$).\\
 
-En particular, es posible operar el VFD en modo local a través de la interfaz de usuario (panel BOP - \emph{basic operator panel}) o en modo remoto haciendo uso de sus puertos de entrada analógicos y digitales. En cualquier caso, la operación del VFD (y por consiguiente del motor eléctrico) se realiza posterior a la configuración de parámetros referidos principalmente a los datos de placa del motor.\\ 
-
-A partir de ello, inicialmente se configuró el VFD asignando valores consistentes a dichos parámetros; es decir: tensión nominal $P0304 = 220$ [V], corriente nominal $P0305 = 5.8$ [A], potencia nominal $P0307 = 1.5$ [kW], factor de potencia $P0308 = 0.81$, frecuencia nominal $P0310 = 60$ [Hz] y velocidad nominal $P0311 = 1720$ [rpm]. Adicionalmente, se configuró una frecuencia de alimentación para el VFD de 50 [Hz] ($P0100 = 0$).\\
-
-Posteriormente, se procedió a diseñar y construir una tarjeta electrónica para realizar la operación remota del VFD (correspondiente con la \texttt{TARJETA DE DESARROLLO} indicada en el \emph{esquema de mando} de la Fig. \ref{cade_simu}), atendiendo a los siguientes requerimientos:
+A partir de ello, se procedió a diseñar y construir una tarjeta electrónica para realizar la operación remota del VFD (correspondiente con la \texttt{TARJETA DE DESARROLLO} indicada en el \emph{esquema de mando} de la Fig. \ref{cade_simu}) atendiendo a los siguientes requerimientos:
 % ------------------------------------------------------------------------
 \begin{itemize}
-\item[\emph{1)}] Como elementos de entrada se requieren botones para realizar las maniobras de avance y retroceso, respectivamente;
-\item[\emph{2)}] Se requiere un botón adicional para ejecutar la maniobra de frenado eléctrico;
-\item[\emph{3)}] Se requiere un medio para detectar por parte del sistema electrónico la activación del freno mecánico, ejecutando la maniobra de desconexión del tren de potencia eléctrico. Para ello, se ubicó un sensor del tipo FSR (force sensitive resistor) acoplado mecánicamente al pedal del freno. De esta manera, la presión mecánica ejercida por el pedal sobre el dispositivo crea una diferencia de potencial eléctrico en sus terminales constituyendo una señal analógica con niveles de voltaje detectables;
-\item[\emph{4)}] Se requiere un indicador para conocer la condición de operación del vehículo a partir de la elección realizada por el usuario en el mando electrónico. Para este propósito se empleó una pantalle de cristal líquido (LCD) de 16 caracteres y 2 líneas;
-\item[\emph{5)}] Se desea que el sistema electrónico sea de configuración flexible para adecuarse a futuros requerimientos y funcionalidades adicionales. Tomando en cuenta lo anterior, se utilizó como unidad de gestión de información al microcontrolador PIC \texttt{18F4550};
-\item[\emph{6)}] Para confort del usuario, la unidad electrónica de mando deberá ubicarse en un lugar estratégico dentro del vehículo. De esta manera, se decidió localizarla al interior del voltante.
-\end{itemize}
+\item[\emph{1)}] Como elementos de entrada se requieren botones para realizar las maniobras de \emph{avance} y \emph{retroceso}, respectivamente;
+\item[\emph{2)}] Se requiere un botón adicional para ejecutar la maniobra de \emph{frenado eléctrico};
+\item[\emph{3)}] Se requiere un medio para detectar la activación del \emph{frenado mecánico} por parte del sistema electrónico, ejecutando la maniobra de desconexión del tren de potencia eléctrico. Para ello, se ubicó un sensor del tipo \emph{FSR} (\emph{force sensitive resistor}) acoplado mecánicamente al pedal del freno. De esta manera, la presión mecánica ejercida por el pedal sobre el dispositivo crea una diferencia de potencial eléctrico en sus terminales constituyendo una señal analógica con niveles de voltaje detectables;
+\item[\emph{4)}] Se requiere un indicador para conocer la condición de operación del vehículo a partir de la elección realizada por el usuario en el \emph{mando electrónico}. Para este propósito se empleó una pantalla de cristal líquido (\emph{LCD}) de 16 caracteres y 2 líneas;
+\item[\emph{5)}] Se desea que el sistema electrónico sea de \emph{configuración flexible} para adecuarse a futuros requerimientos y funcionalidades adicionales. Tomando en cuenta lo anterior, se utilizó el microcontrolador PIC \texttt{18F4550} como unidad de gestión de información;
+\item[\emph{6)}] Para \emph{confort} del usuario la unidad de \emph{mando electrónico} deberá ubicarse en un lugar estratégico dentro del vehículo. De esta manera, se decidió localizarla al interior del voltante.
+\end{itemize}\
 % ------------------------------------------------------------------------
 
-El diagrama esquemático para el circuito electrónico diseñado, incluyendo los elementos mencionados, se presenta en la Fig. \ref{esquema}. A partir de ello, se destaca el acople entre las salidas digitales del microcontrolador y las entradas digitales del VFD a través de optoacopladores (para elevar los niveles de señal de $5$ [VDC] a $24$ [VDC] \textcolor[rgb]{0.98,0.00,0.00}{\textbf{¿De dónde obtuvieron los $24$ [VDC] si la batería es de $12$ [VDC]?RTA:  La alimentacion DC de la PCB esta dada por el VFD el cual tiene una salida de 24, entrada que esta conectada a la PCB por medio del conector $IN24$ mostrado en \ref{esquema}}}, la conversión paralelo a serie entre la pantalla LCD y el microcontrolador a través de un convertidor \texttt{I2C} de referencia \texttt{PCF8574} (reduciendo el tamaño del enrutado en la tarjeta) y la regulación de alimentación de 24 [VDC] a 5 [VDC] (para alimentar los elementos del circuito, en su mayoría de tecnología \texttt{TTL}).\\
+El diagrama esquemático para el circuito electrónico diseñado (incluyendo los elementos mencionados) se presenta en la Fig. \ref{esquema}. A partir de ello, se destaca el acople entre las salidas digitales del microcontrolador y las entradas digitales del VFD a través de optoacopladores (para elevar los niveles de señal de $5$ [VDC] a $24$ [VDC]), la conversión paralelo a serie entre la pantalla LCD y el microcontrolador a través de un convertidor \texttt{I2C} de referencia \texttt{PCF8574} (reduciendo el tamaño del enrutado en la tarjeta) y la regulación del suministro de $24$ [VDC] (provenientes del VFD) a $5$ [VDC] para alimentar los elementos del circuito, en su mayoría de tecnología \texttt{TTL}.\\
 % ------------------------------------------------------------------------
 \begin{figure}[htbp]
 \centering		
-\includegraphics[width=1.0\textwidth]{Figs/circuito_electronico.eps}
+\includegraphics[angle=90,width=0.9\textwidth]{Figs/circuito_electronico.eps}
 \caption{Diagrama esquemático para tarjeta electrónica diseñada}\label{esquema}
 \end{figure}		
-
+% ------------------------------------------------------------------------
 
 Asimismo, la Fig. \ref{mandoboard} presenta el diseño de la capa de componentes y de ruteado circuital para el montaje del circuito impreso (i.e. \emph{PCB}), al igual que la apariencia final de la tarjeta de mando electrónico incorporada en el volante del vehículo.\\
 % ------------------------------------------------------------------------
@@ -487,63 +483,76 @@ Asimismo, la Fig. \ref{mandoboard} presenta el diseño de la capa de componentes 
 		\subfigure[Capa de componentes]{\includegraphics[width=0.45\textwidth]{Figs/pcb3d.eps}}
 		\subfigure[Capa de ruteado]{\includegraphics[width=0.45\textwidth]{Figs/PCB_gray.eps}}\\
 		\subfigure[Apariencia final en volante]{\includegraphics[width=0.45\textwidth]{Figs/volante_pcb.eps}}
-		\caption{Diseño de tarjeta de mando electrónico.}\label{mandoboard}
+		\caption{Diseño de tarjeta de \emph{mando electrónico}}\label{mandoboard}
 \end{figure}
 % ------------------------------------------------------------------------
 
-Una vez diseñada e implementada la unidad de mando electrónico (hardware), es necesario realizar la implementación del autómata correspondiente a la operación deseada del vehículo. Para ello se definen los estados operativos del sistema a partir de la máquina de estados finita ilustrada en la Fig. \ref{fsm}.\\
+Una vez diseñada e implementada la unidad de \emph{mando electrónico} (hardware), es necesario realizar la implementación del autómata (\emph{software}) correspondiente a la operación deseada del vehículo. Para ello se definen los estados operativos del sistema a partir de la \emph{máquina de estado finito} ilustrada en la Fig. \ref{fsm}.\\
 % ------------------------------------------------------------------------
 \begin{figure}[htbp]
 \centering		
 \includegraphics[width=1.0\textwidth]{Figs/fsm.eps}
-\caption{Máquina de estados de operación para comando electrónico del vehículo}\label{fsm}
+\caption{Máquina de estados de operación para \emph{mando electrónico} del vehículo}\label{fsm}
 \end{figure}
 % ------------------------------------------------------------------------
 
-A partir de ello, la operación del motor se define empleando las entradas digitales del VFD (\emph{I1 I2 I3 I4}) considerando los siguientes comandos de acción:
+Como se observa, el sistema parte de una condición de \texttt{REPOSO} a partir de la cual es posible activar la condición de \texttt{AVANCE} o \texttt{RETROCESO}, dependiendo del botón accionado en el mando electrónico (\emph{R} o \emph{L}, respectivamente). Una vez hecho esto, el vehículo se mantendrá en movimiento a menos que se active alguna de las condiciones de \texttt{FRENADO}: \texttt{ELÉCTRICO} (a través de \emph{Fe}) o \texttt{MECÁNICO} (a través de \emph{Fr}). Si el \texttt{FRENADO} es \texttt{ELÉCTRICO}, se produce una desaceleración programada tipo rampa en el tren de potencia. Por su parte, si el \texttt{FRENADO} es \texttt{MECÁNICO} el tren de potencia se desactiva para reducir la velocidad mediante fricción mecánica. Obsérvese que la transición al \texttt{REPOSO} desde los estados: \texttt{AVANCE}, \texttt{RETROCESO} y \texttt{FRENADO MECÁNICO}, se realiza a través de un estado de \texttt{ESPERA} que incorpora una rampa de desaceleración (con tiempo de $10$ [s]) para proteger el tren de potencia de un cambio repentino del sentido de giro que pueda comprometer la integridad de sus componentes mecánicas. En el caso de la transición entre el estado \texttt{FRENADO ELÉCTRICO} y la condición de \texttt{REPOSO}, lo anterior no se requiere debido a las características previamente descritas para ese estado. Adicionalmente, cada condición de transición define valores de salida en las variables $\{\text{\emph{I1, I2, I3, I4}}\}$ correspondientes con las entradas digitales del VFD.\\
+
+La configuración realizada para dichos comandos de acción del motor se realizó como sigue:
 % ------------------------------------------------------------------------
 \begin{itemize}
 \item[\emph{I1}:] Se configuró en modo \emph{ON/OFF1} a partir de la instrucción $P0701=1$. Un nivel de entrada alto activa la operación del VFD, mientras que un nivel de entrada bajo activa un frenado eléctrico tipo rampa con tiempo $P1121=10$ [s];
-\item[\emph{I2}:] Se configuró en modo \emph{selector de frecuencia fija bit0} a partir de la instrucción $P0702=15$. Un nivel de entrada alto activa el giro del motor hacia la izquierda (i.e. \texttt{AVANZA}) a velocidad fija de $P1001=-60$ [Hz], incrementada desde el reposo por una rampa con tiempo $P1121=30$ [s];
-\item[\emph{I3}:] Se configuró en modo \emph{selector de frecuencia fija bit1} a partir de la instrucción $P0703=16$. Un nivel de entrada alto activa el giro del motor hacia la derecha (i.e. \texttt{RETROCEDE}) a velocidad fija de $P1002=30$ [Hz], incrementada desde el reposo por una rampa con tiempo $P1120=10$ [s];
+\item[\emph{I2}:] Se configuró en modo \emph{selector de frecuencia fija bit0} a partir de la instrucción $P0702=15$. Un nivel de entrada alto activa el giro del motor hacia la izquierda (i.e. \texttt{AVANCE}) a velocidad fija de $P1001=-60$ [Hz], incrementada desde el reposo por una rampa con tiempo $P1121=30$ [s];
+\item[\emph{I3}:] Se configuró en modo \emph{selector de frecuencia fija bit1} a partir de la instrucción $P0703=16$. Un nivel de entrada alto activa el giro del motor hacia la derecha (i.e. \texttt{RETROCESO}) a velocidad fija de $P1002=30$ [Hz], incrementada desde el reposo por una rampa con tiempo $P1120=10$ [s];
 \item[\emph{I4}:] Se configuró en modo \emph{OFF2 - coast to standstill} a partir de la instrucción $P0704=3$. Un nivel de entrada bajo desactiva el VFD, permitiendo un frenado mecánico en rodadura libre.
-\end{itemize}
+\end{itemize}\
 % ------------------------------------------------------------------------
 
-El detalle de todas las instrucciones de configuración para el VFD se encuentran detalladas en el manual proporcionado por el fabricante \cite{siemens2014}.
+El detalle de todas las instrucciones de configuración para el VFD se encuentra ilustrado en el manual proporcionado por el fabricante \cite{siemens2014}.
+% ------------------------------------------------------------------------
+\section{Prototipo final implementado}
+% ------------------------------------------------------------------------
+El prototipo de vehículo eléctrico implementado se muestra en la Fig. \ref{prototipofinal}. Como se observa, el sistema refleja la estructura funcional propuesta en la Fig. \ref{Diagrama_bloques} y el modelo tridimensional definido previamente en la Fig. \ref{Modelo_Blender_2}.\\
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+		\subfigure[vista isométrica]{\includegraphics[width=0.7\textwidth]{Figs/carro_total.eps}}\\
+		\subfigure[detalle de componentes: batería (1), inversor (2), VFD (3), motor (4), mando electrónico (5), acople de tracción mecánica (6) y carrocería (7)]{\includegraphics[width=0.7\textwidth]{Figs/Vehiculo_arriba3.eps}}
+		\caption{Prototipo de vehículo eléctrico \texttt{E3carT}}\label{prototipofinal}
+\end{figure}
+% ------------------------------------------------------------------------
 
-\newpage
-\begin{center}
-\textcolor[rgb]{0.98,0.00,0.00}{\textbf{HASTA AQUÍ VOY CON LA REVISIÓN.....}}
-\end{center}
-\newpage
-
-%% ------------------------------------------------------------------------
-%\section{Cotizaciones y compra final}
-%% ------------------------------------------------------------------------
-%El día 22 de mayo de 2020 se realizó la siguiente solicitud de gestión de compra de estos equipos vía correo electrónico, a través del Ing. Julián Eduardo Blanco Cortez:\\
-%% ------------------------------------------------------------------------
-%\begin{itemize}
-%\item Un (1) motor de inducción, tipo jaula de ardilla, de 2 HP, 1800 RPM, 60 Hz, 220/230 VAC, tipo NEMA C, con base del tipo "foot mounted". Marcas tentativas del producto: WEG, Siemens, ABB;
-%\item Un (1) variador de frecuencia con salida para motor trifásico (220/230) de 2 HP, con entrada de alimentación monofásica a 120 VAC / 60 Hz, que posea opciones de frenado del tipo: rampa, coast, injection. Marcas tentativas del producto: WEG, Rockwell Automation, SIEMENS, Danfoss;
-%\item Un (1) inversor cargador, de 12 VDC a 120 VAC / 60 Hz, con potencia de 2 kW. Marcas tentativas del producto: Genérica;
-%\item Cinco (5) ruedas neumáticas de 14 pulgadas. Marcas tentativas: Roller;
-%\item Una (1) batería recargable ácido-plomo de 12 V / 120 Ah, de ciclo profundo y peso no mayor a 40 kg. Marcas tentativas: Varta, NPP, Rolls. La imagen del elemento se adjunta al presente correo.
-%\end{itemize}
-%% ------------------------------------------------------------------------
-%A la cual se adjuntaron las imágenes de la Fig. \ref{Elementos_cotizados}.\\
-%
-%% ------------------------------------------------------------------------
-%\begin{figure}[htbp]
-%\centering		
-%\includegraphics[width=0.5\textwidth]{Figs/Elementos-cotizados.eps}
-%\caption[Elementos cotizados]{Imágenes adjuntas al correo en el que se envió la cotización final a la Universidad.}
-%\label{Elementos_cotizados}
-%\end{figure}
-%% ------------------------------------------------------------------------
-%Se inició un estudio de mercado con los proveedores reconocidos por la UIS y se les solicitó enviar la cotización de estos elementos, a la cual contestaron 5 proveedores: CASA HERMES LTDA., DYNAMO ELECTRONICS S.A.S, SUCONEL S.A., NARVAEZ INGENIERÍA S.A.S., y SOLUCIONES INDUSTRIALES INTELIGENTES S.A.S. Estas se adjuntarán como archivos separados.\\
-%
-%De estas se concluyó: la cotización de elementos realizada por CASA HERMES LTDA se presentó como la más completa en cuanto al cumplimiento de las especificaciones técnicas solicitadas. Sin embargo, no fue la oferta más económica, en parte por la cotización de un inversor solar con algoritmo integrado MPPT, innecesario para la aplicación en cuestión. La cotización realizada por DYNAMO ELECTRONICS fue la más económica. Sin embargo, incumplía las restricciones de peso requeridas para la batería (máximo 40 kg), además de no precisar que el motor de inducción cumpla la norma NEMA tipo C, incumpliendo parcialmente las especificaciones requeridas. La cotización realizada por SOLUCIONES INDUSTRIALES INTELIGENTES fue excesivamente costosa comparada con las demás ofertas comerciales, lo cual la hizo inviable. La cotización enviada por SUCONEL fue incompleta, pues no cotizaron el inversor/cargador. Asimismo, cotizaron llantas para vehículos convencionales que no correspondían a los requerimientos solicitados. La cotización enviada por NARVAEZ INGENIERÍA a pesar de incluir todos los elementos, sólo presentó información técnica del variador de frecuencia y del motor. El motor cotizado fue de categoría B, lo cual incumplía el requerimiento solicitado (tipo NEMA C). De los demás elementos no se realizó descripción diferente a la solicitada en el requerimiento inicial.\\
-%
-%Se pidió entonces realizar la compra a CASA HERMES LTDA, y en caso de no ser posible, realizarla a DYNAMO ELECTROICS. Esta última fue la opción escogida.
-% 
+De otro lado, la Tabla \ref{compra_final} presenta la lista de elementos utilizados y otros gastos involucrados en la construcción del prototipo. En este punto es importante resaltar el apoyo financiero recibido por parte de la \emph{Universidad Industrial de Santander} a través de la gestión realizada por el Profesor \emph{Gerardo Latorre Bayona}, quien en su calidad de \emph{Vicerrector Administrativo} facilitó la compra de los elementos necesarios para la electrificación del tren de potencia del vehículo, según ODC 2020000909 realizada con la empresa \texttt{DYNAMO ELECTRONICS SAS}.
+% ------------------------------------------------------------------------
+\begin{table}[htbp]
+% ------------------------------------------------------------------------
+\centering
+\caption{Costos involucrados en la realización del proyecto}
+{\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{lcr}
+% ------------------------------------------------------------------------
+\hline
+\footnotesize{Elemento}                                         & \footnotesize{Fuente financiación} & \footnotesize{Valor \texttt{COP}}\\
+\hline
+\footnotesize{Motor jaula de ardilla \emph{SIMOTICS} de 2 [HP]} & \footnotesize{UIS}                 & \footnotesize{$\$940.000$}       \\
+\footnotesize{VFD \emph{SINAMICS} V20 200-240 [VAC]}            & \footnotesize{UIS}                 & \footnotesize{$\$1'086.000$}     \\
+\footnotesize{Inversor \emph{off-grid} onda pura NVP-2000 [W]}  & \footnotesize{UIS}                 & \footnotesize{$\$1'621.000$}     \\
+\footnotesize{Cargador \emph{AMPEAK} 25 [A] 12 [V]}             & \footnotesize{UIS}                 & \footnotesize{$\$599.000$}       \\
+\footnotesize{Bateria ciclo profundo 12 [V] 150 [Ah] 45.5 [kg]} & \footnotesize{UIS}                 & \footnotesize{$\$1'429.000$}     \\
+\footnotesize{Ruedas macho de 400 [mm]}                         & \footnotesize{UIS}                 & \footnotesize{$\$275.000$}       \\
+\footnotesize{Carrocería}                                       & \footnotesize{Propia}              & \footnotesize{$\$250.000$}       \\
+\footnotesize{Elementos adecuaciones mecánicas}                 & \footnotesize{Propia}              & \footnotesize{$\$273.800$}       \\
+\footnotesize{Mano de obra}                                     & \footnotesize{Propia}              & \footnotesize{$\$500.000$}       \\
+\footnotesize{Elementos adecuaciones eléctricas}                & \footnotesize{Propia}              & \footnotesize{$\$74.000$}        \\
+\footnotesize{Elementos adecuaciones electrónicas}              & \footnotesize{Propia}              & \footnotesize{$\$179.500$}       \\
+\footnotesize{Pintura electrostática}                           & \footnotesize{Propia}              & \footnotesize{$\$100.000$}       \\
+\footnotesize{Identidad visual}                                 & \footnotesize{Propia}              & \footnotesize{$\$20.000$}        \\
+\footnotesize{Transporte}                                       & \footnotesize{Propia}              & \footnotesize{$\$150.000$}       \\
+\hline
+                                                                & \footnotesize{TOTAL}               & \footnotesize{$\$7'495.300$}     \\
+\hline
+% ------------------------------------------------------------------------
+\end{tabular}\label{compra_final}}
+% ------------------------------------------------------------------------
+\end{table}
+% ------------------------------------------------------------------------ 

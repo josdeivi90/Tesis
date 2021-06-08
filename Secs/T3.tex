@@ -5,5 +5,136 @@
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
-\chapter{Diseño del sistema de desarrollo}\label{chap3}
+\chapter{Análisis experimental}\label{chap3}
+% ------------------------------------------------------------------------
+En complemento al dimensionamiento, selección y acople de componentes realizado
+para el prototipo de vehículo eléctrico, el presente \emph{Capítulo} se enfoca
+en la descripción de un conjunto de pruebas desarrolladas para verificar la
+correcta operación del sistema experimental: \texttt{E3carT}.
+% ------------------------------------------------------------------------
+\section{Pruebas de componentes individuales}
+% ------------------------------------------------------------------------
+Inicialmente y posterior a la compra de los elementos relacionados en la
+Tabla \ref{compra_final} para la \emph{electrificación del tren de potencia}, se
+requirió verificar el apropiado funcionamiento de los dispositivos individuales.\\
+
+\noindent Para ello se realizaron los siguientes montajes y pruebas:
+% ------------------------------------------------------------------------
+\begin{itemize}
+\item[1.] \emph{Verificación de carga de batería}: empleando la conexión directa para el
+cargador de batería mostrado en la Fig. \ref{cargador}, siendo alimentado en su entrada desde la red de
+distribución y conectando en su salida la batería de \emph{Plomo-ácido} seleccionada. A través
+de las indicaciones del panel de visualización del cargador y la lectura de un múltimetro fue posible
+verificar que tanto el cargador como la batería presentaban un comportamiento acorde con sus características técnicas. En particular, la Fig. \ref{cargafig} muestra el comportamiento temporal de los datos tabulados durante dicha prueba a partir de los cuales se destaca el tiempo de carga total (de alrededor 5 [h]), el valor de tensión en que se satura la carga (de 14.6 [VDC]) y el rango de voltaje mínimo para la condición de descarga (cercano a los 13.4 [VDC]);
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+\subfigure[Voltaje de carga]
+{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_conduccion2_CargaV.eps}\label{Vcarga}}
+			\subfigure[Corriente de carga]
+{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_conduccion2_CargaI.eps}\label{Icarga}}
+\caption{Comportamiento de variables eléctricas durante carga de batería}\label{cargafig}
+\end{figure}
+% ------------------------------------------------------------------------
+\item[2.] \emph{Verificación de conjunto inversor + motor}: con la batería cargada se procedió a alimentar el inversor de
+potencia y a su vez conectar en su salida el VFD acoplado al motor de inducción, con lo cual mediante operación manual
+del panel \emph{BOP} fue posible manipular la operación de la máquina desde el reposo y hasta velocidades en un bajo rango de valores.
+\end{itemize}\
+% ------------------------------------------------------------------------
+
+\noindent La Fig. \ref{montajeind} ilustra los montajes realizados para las pruebas de componentes individuales.
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+		\subfigure[Cargador y batería]{\includegraphics[angle=90, width=0.5\textwidth]{Figs/Pruebas_casa1_3.eps}}\\
+		\subfigure[Batería e inversor]{\includegraphics[trim=1cm 0 0 1.5cm, clip, angle=90, width=0.5\textwidth]{Figs/Pruebas_casa1_1.eps}}\\
+		\subfigure[Operación manual VFD]{\includegraphics[width=0.5\textwidth]{Figs/Pruebas_taller_1.eps}}
+		\caption{Ilustración para pruebas de componentes individuales}\label{montajeind}
+\end{figure}
+% ------------------------------------------------------------------------
+\section{Pruebas mecánicas en vacío}
+% ------------------------------------------------------------------------
+Una vez verificado el estado de los elementos para la \emph{electrificación
+del tren de potencia}, se realizó el acople entre las componentes eléctricas y mecánicas del prototipo
+a través de una prueba en vacío; es decir, sin carga adicional a la de rodamientos
+y acoples de tracción mecánica.\\
+
+\noindent Para ello se realizaron los siguientes montajes y pruebas:
+% ------------------------------------------------------------------------
+\begin{itemize}
+\item[1.] \emph{Verificación de rampa de aceleración}: con las ruedas traseras del vehículo
+en modo flotante (i.e. sin contacto con el suelo) y sin la presencia del tripulante, se realizó la programación y ejecución en el VFD para una rampa de arranque desde el reposo y hasta la velocidad nominal del motor. A partir de ello, los valores eficaces de voltaje y corriente suministrados a la máquina y adquiridos desde el VFD se muestran en la Fig. \ref{pruebasvacio}. Como se observa, se verifica una tendencia creciente con pendiente constante para el incremento de voltaje (ver Fig. \ref{Vvacio}) consistente con la rampa programada. Asimismo, es interesante observar el pico de corriente en el arranque, que eventualmente se mantiene en un valor fijo (ver Fig. \ref{Ivacio}) posterior a vencerse la inercia;
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+		\subfigure[Tensión VFD]{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_Casa4_1V.eps}\label{Vvacio}}
+		\subfigure[Corriente VFD]{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_Casa4_1I.eps}\label{Ivacio}}\\
+		\subfigure[Velocidad $\omega_2$ en eje de ruedas]{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_Casa4_2.eps}\label{wvacio}}
+		\caption{Magnitudes eléctricas para prueba mecánica en vacío}\label{pruebasvacio}
+\end{figure}
+% ------------------------------------------------------------------------
+\item[2.] \emph{Verificación de velocidad en el eje de las ruedas}: utilizando un sensor de \emph{efecto Hall} y procesamiento de datos a través de un microcontrolador \emph{Arduino}, se obtuvo la gráfica mostrada en la Fig. \ref{wvacio} a través de la cual fue posible confirmar que ante condiciones nominales de operación la velocidad angular de las ruedas del prototipo experimental ($\omega_2$ en el diagrama de bloques de la Fig. \ref{Diagrama_bloques}) corresponde con un valor cercano a $\frac{1720}{5}$ [rpm] $\approx \: 344$ [rpm]. Los cambios de tendencia en la curva son atribuibles a ruidos de medida (tanto eléctricos como mecánicos por vibración) y al procesamiento de datos experimentales (para un periodo de muestreo de 10 [s]). Por su parte, el sensor de \emph{efecto Hall} utilizado se muestra en la Fig. \ref{hall}.
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{Figs/sensor_hall}
+\caption{Sensor de \emph{efecto Hall} utilizado para medir $\omega_2$}\label{hall}
+\end{figure}
+% ------------------------------------------------------------------------
+\end{itemize}\
+% ------------------------------------------------------------------------
+
+\noindent La Fig. \ref{montajevac} ilustra los montajes realizados para las pruebas mecánicas en vacío.
+% ------------------------------------------------------------------------
+\begin{figure}[htbp]
+\centering
+		\subfigure[Vehículo en modo flotante]{\includegraphics[trim=0 4cm 0 0, clip, width=0.35\textwidth]{Figs/Pruebas_casa2_1.eps}}\\
+		\subfigure[Medición de variables en VFD]{\includegraphics[trim=0 0 0 2cm, clip, width=0.35\textwidth]{Figs/Pruebas_casa4_2.eps}}\\
+		\subfigure[Medición de variables con multímetro]{\includegraphics[trim=0 0 0 4cm, clip, width=0.5\textwidth]{Figs/Pruebas_conduccion2_2.eps}}
+		\caption{Ilustración para pruebas mecánicas en vacío}\label{montajevac}
+\end{figure}
+% ------------------------------------------------------------------------
+\section{Pruebas tripuladas en campo}
+% ------------------------------------------------------------------------
+Posterior a la verificación del apropiado acople entre las componentes mecánicas y
+eléctricas del prototipo en condiciones de vacío, se procedió a realizar pruebas de conducción
+tripuladas.\\
+% ------------------------------------------------------------------------
+\begin{figure}[h]
+\centering
+		\subfigure{\includegraphics[width=0.4\textwidth]{Figs/Pruebas_conduccion2_1.eps}}\\
+		\subfigure{\includegraphics[width=0.5\textwidth]{Figs/Pruebas_conduccion2_4.eps}}
+		\caption{Ilustración pruebas tripuladas en \emph{cancha municipal de Piedecuesta}}\label{montajecamp}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Para ello, se eligió como escenario la \emph{cancha de futbol municipal de Piedecuesta} (ver Fig. \ref{montajecamp}) donde se realizó la operación del vehículo por parte de su tripulante según las condiciones descritas en la \emph{máquina de estados} de la Fig. \ref{fsm}. Particularmente, las curvas de arranque para corriente, voltaje y frecuencia capturadas a partir del VFD se muestran en la Fig. \ref{pruebascampo}.\\
+% ------------------------------------------------------------------------
+\begin{figure}[h]
+\centering
+		\subfigure[Tensión]{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_conduccion2_2V.eps}\label{Vcampo}}\\
+		\subfigure[Corriente]{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_conduccion2_2I.eps}\label{Icampo}}\\
+		\subfigure[Frecuencia]{\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_conduccion2_Aceleracion.eps}\label{wcampo}}
+		\caption{Magnitudes eléctricas en VFD para prueba tripulada en campo}\label{pruebascampo}
+\end{figure}
+% ------------------------------------------------------------------------
+
+Como se observa, la gráfica de tensión aplicada a la máquina (ver Fig. \ref{Vcampo}) presenta un comportamiento similar al verificado para la prueba en vacío (al menos hasta el rango de valores capturado). Por su parte, el comportamiento de la corriente para la prueba en campo (ver Fig. \ref{Icampo}) es más errático debido a vibraciones mecánicas y a la operación bajo regimen de carga del VFD. Fue precisamente la incidencia de dichas variaciones lo que motivó a no graficar para este caso la lectura de velocidad obtenida por el sensor de \emph{efecto Hall}, pues era prácticamente ilegible. No obstante, tomando en cuenta la relación existente entre la frecuencia de alimentación $f$ en el estator y la velocidad de operación $\omega_1$ en [rpm] para la máquina de inducción \cite{chapman2000}:
+% ------------------------------------------------------------------------
+$$
+\omega_1 = \frac{60 \times f}{p}\left(1 - s\right),
+$$
+% ------------------------------------------------------------------------
+ante un deslizamiento $s$ y un número $p$ de pares de polos, es posible relacionar
+el cambio de frecuencia de alimentación ilustrado en la Fig. \ref{wcampo} con el cambio de velocidad en el eje de la máquina ($\omega_1$ en el diagrama de bloques de la Fig. \ref{Diagrama_bloques}). Así entonces, la utilidad de la información mostrada en la Fig. \ref{wvacio} corresponde con la verificación experimental para la relación de transmformación $N$ dada por el acople de tracción mecánica.\\
+
+Finalmente, en la Fig. \ref{descargafig} se observa el patrón de descarga del voltaje de la batería durante las pruebas de campo. En particular, se verifica un tiempo de alrededor 35 [min] de autonomía para el sistema diseñado, lo cual satisface las expectativas del dimensionamiento propuesto en la \emph{Subsección} \ref{batsect}. También es importante resaltar la escasa excursión de voltaje desde el valor a máxima carga (14.6 [VDC]) y la tensión considerada como condición de descarga, detectada automáticamente por el VFD a partir de la activación de la \emph{alarma de subtensión} (identificada con el código \texttt{F3}). Para este caso la corriente de descarga tampoco fue graficada debido a la excesiva influencia del ruido (eléctrico y mecánico) de medida, que la hicieron ilegible.
+% ------------------------------------------------------------------------
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{Figs/Datos_pruebas_conduccion2_Descarga.eps}
+\caption{Comportamiento de voltaje durante prueba de descarga en batería}\label{descargafig}
+\end{figure}
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
